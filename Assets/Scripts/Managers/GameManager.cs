@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
                     _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
                     AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                     _currentSellableObject.SetActive(false);
-
+                    Data.soldUICount++;
                     Debug.Log("Clicked on: " + _currentSellableObject.name);
                 }
             }
@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
         if (IsGameOver) return;
 
         gameData.currentDay++;
+
+        // TO DO :  si Data.soldUICount > 0 alors proba event 20% partout 
 
         if (gameData.currentDay > gameData.totalDays)
         {

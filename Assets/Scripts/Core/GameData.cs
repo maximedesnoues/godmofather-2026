@@ -6,7 +6,7 @@ public class GameData
 {
     [Header("Money")]
     [Min(0)] public int currentMoney = 1000;
-    [Min(0)] public int moneyQuota = 10000;
+    [Min(0)] public int moneyQuota = 300000;
     [Min(0)] public int soldUICount = 0;
 
     [Header("Time")]
@@ -15,7 +15,7 @@ public class GameData
 
     [Header("Market")]
     [Min(0f)] public float currentMarketValue = 100f;
-    public CurveMovement playerPrediction = CurveMovement.Stable;
+    //public CurveMovement playerPrediction = CurveMovement.Stable;
     [Min(0)] public int currentBet = 0;
     public bool hasPrediction = false;
 

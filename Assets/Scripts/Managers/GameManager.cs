@@ -3,10 +3,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     [SerializeField] private bool _isSellingMode;
     [SerializeField] private List<CanvasGroup> _sellingModeCanvasGroup;
     private int _sellableUILayer;
@@ -15,12 +18,29 @@ public class GameManager : MonoBehaviour
     [SerializeField] private BuyableData _buyableData;
     private GameObject _currentSellableObject;
 
-    public static GameManager Instance;
+    [SerializeField] private Slider _moneySlider;
+
+    [Header("Game Data")]
+    [SerializeField] private GameData gameData = new GameData();
+
+    public GameData Data => gameData;
+    public bool IsGameOver { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
     private void Start()
     {
-        Instance = this;
         _sellableUILayer = LayerMask.NameToLayer("SellableUI");
         Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
+        _moneySlider.value = gameData.currentMoney;
     }
 
     public void ToggleSellingMode()
@@ -43,6 +63,7 @@ public class GameManager : MonoBehaviour
                 if (Mouse.current.leftButton.wasPressedThisFrame)
                 {
                     _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
+                    AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                     _currentSellableObject.SetActive(false);
 
                     Debug.Log("Clicked on: " + _currentSellableObject.name);
@@ -55,6 +76,42 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void AddMoney(int amount)
+    {
+        if (amount <= 0) return;
+        gameData.currentMoney += amount;
+        _moneySlider.value = gameData.currentMoney;
+    }
+
+    public void RemoveMoney(int amount)
+    {
+        if (amount <= 0) return;
+        gameData.currentMoney = Mathf.Max(0, gameData.currentMoney - amount);
+    }
+
+    public void NextDay()
+    {
+        if (IsGameOver) return;
+
+        gameData.currentDay++;
+
+        if (gameData.currentDay > gameData.totalDays)
+        {
+            EndGame();
+        }
+    }
+
+    private void EndGame()
+    {
+        IsGameOver = true;
+        Debug.Log("===== FIN DE PARTIE =====");
+
+        if (gameData.QuotaReached)
+            Debug.Log("Victoire : quota atteint !");
+        else
+            Debug.Log("Défaite : quota non atteint.");
+    }
+
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)
@@ -78,3 +135,4 @@ public class GameManager : MonoBehaviour
         return raysastResults;
     }
 }
+

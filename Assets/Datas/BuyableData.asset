@@ -15,8 +15,44 @@ MonoBehaviour:
   data:
   - name: SliderSon
     value: 50
-    price: 10
-    prefab: {fileID: 2556260621458322465, guid: 6dc6fca71c02bdb4e8ad062177ec65ac, type: 3}
-    isBuyable: 0
-    needReplacement: 1
+    isBuyable: 1
+  - name: Producer
+    value: 50
+    isBuyable: 1
+  - name: Camille
+    value: 50
+    isBuyable: 1
+  - name: Programers
+    value: 50
+    isBuyable: 1
+  - name: Sarah
+    value: 50
+    isBuyable: 1
+  - name: Maxime
+    value: 50
+    isBuyable: 1
+  - name: Designers
+    value: 50
+    isBuyable: 1
+  - name: Loic
+    value: 50
+    isBuyable: 1
+  - name: Matteo
+    value: 50
+    isBuyable: 1
+  - name: Artists
+    value: 50
+    isBuyable: 1
+  - name: Emma
+    value: 50
+    isBuyable: 1
+  - name: Elise
+    value: 50
+    isBuyable: 1
+  - name: Credit
+    value: 50
+    isBuyable: 1
+  - name: resoChoice
+    value: 50
+    isBuyable: 1
   emptySapce: {fileID: 4237431106115338007, guid: efb9624ba41545d499e6cd46940955db, type: 3}

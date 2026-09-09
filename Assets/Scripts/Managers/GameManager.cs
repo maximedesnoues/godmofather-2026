@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         _sellableUILayer = LayerMask.NameToLayer("SellableUI");
+        Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
     public void ToggleSellingMode()

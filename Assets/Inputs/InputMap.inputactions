@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "InputMap",
+    "maps": [
+        {
+            "name": "PlayerInput",
+            "id": "2a79ce84-b925-4cfc-a10b-37214fa17ab1",
+            "actions": [
+                {
+                    "name": "SellingMode",
+                    "type": "Button",
+                    "id": "77129a46-7ca0-45b7-bce1-6e44820e60f7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5aa4aa2d-d9a7-4c04-ba76-f63e95fe8806",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SellingMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

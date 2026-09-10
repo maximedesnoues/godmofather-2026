@@ -15,7 +15,7 @@ public class GameData
 
     [Header("Market")]
     [Min(0f)] public float currentMarketValue = 100f;
-    //public CurveMovement playerPrediction = CurveMovement.Stable;
+    public CurveMovement playerPrediction = CurveMovement.Stable;
     [Min(0)] public int currentBet = 0;
     public bool hasPrediction = false;
 

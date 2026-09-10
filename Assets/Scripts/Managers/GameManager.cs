@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Slider _moneySlider;
 
+    [Header("Market Events")]
+    [SerializeField] private List<MarketEventData> _marketEvents;
+
     [Header("Game Data")]
     [SerializeField] private GameData gameData = new GameData();
 
@@ -35,6 +38,26 @@ public class GameManager : MonoBehaviour
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
+    private readonly Dictionary<MarketEventData, EventProbabilities> _originalEventProbabilities = new Dictionary<MarketEventData, EventProbabilities>();
+
+    private struct EventProbabilities
+    {
+        public int strongUp;
+        public int up;
+        public int stable;
+        public int down;
+        public int strongDown;
+
+        public EventProbabilities(MarketEventData marketEvent)
+        {
+            strongUp = marketEvent.strongUpProbability;
+            up = marketEvent.upProbability;
+            stable = marketEvent.stableProbability;
+            down = marketEvent.downProbability;
+            strongDown = marketEvent.strongDownProbability;
+        }
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -50,6 +73,7 @@ public class GameManager : MonoBehaviour
         _sellableUILayer = LayerMask.NameToLayer("SellableUI");
         Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
         _moneySlider.value = gameData.currentMoney;
+        SaveOriginalEventProbabilities();
     }
 
     public void ToggleSellingMode()
@@ -124,10 +148,62 @@ public class GameManager : MonoBehaviour
             else if (gameData.nextMail.mailType == MailData.MailType.Story)
                 mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconStory;
         }
+        bool soldUIEffectActive = gameData.soldUICount > 0;
+
+        if (gameData.soldUICount > 0)
+            gameData.soldUICount--;
+
+        if (soldUIEffectActive)
+            SetEqualEventProbabilities();
+        else
+            RestoreOriginalEventProbabilities();
 
         if (gameData.currentDay > gameData.totalDays)
         {
             EndGame();
+        }
+    }
+
+    private void SaveOriginalEventProbabilities()
+    {
+        _originalEventProbabilities.Clear();
+
+        foreach (MarketEventData marketEvent in _marketEvents)
+        {
+            if (marketEvent == null) continue;
+
+            _originalEventProbabilities[marketEvent] = new EventProbabilities(marketEvent);
+        }
+    }
+
+    private void SetEqualEventProbabilities()
+    {
+        foreach (MarketEventData marketEvent in _marketEvents)
+        {
+            if (marketEvent == null) continue;
+
+            marketEvent.strongUpProbability = 20;
+            marketEvent.upProbability = 20;
+            marketEvent.stableProbability = 20;
+            marketEvent.downProbability = 20;
+            marketEvent.strongDownProbability = 20;
+        }
+    }
+
+    private void RestoreOriginalEventProbabilities()
+    {
+        foreach (KeyValuePair<MarketEventData, EventProbabilities> entry in _originalEventProbabilities)
+        {
+            MarketEventData marketEvent = entry.Key;
+            EventProbabilities probabilities = entry.Value;
+
+            if (marketEvent == null) continue;
+
+            marketEvent.strongUpProbability = probabilities.strongUp;
+            marketEvent.upProbability = probabilities.up;
+            marketEvent.stableProbability = probabilities.stable;
+            marketEvent.downProbability = probabilities.down;
+            marketEvent.strongDownProbability = probabilities.strongDown;
         }
     }
 

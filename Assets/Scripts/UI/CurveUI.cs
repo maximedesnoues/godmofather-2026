@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +10,8 @@ public class CurveUI : MonoBehaviour
 
     [Header("Curve Position")]
     [SerializeField] private float startX = 5f;
-    [SerializeField] private float startY = 120f;
-    [SerializeField] private float xStep = 85f;
+    [SerializeField] private float startY = 280f;
+    [SerializeField] private float xStep = 75f;
 
     [Header("Movement Heights")]
     [SerializeField] private float strongUpHeight = 80f;
@@ -25,6 +26,9 @@ public class CurveUI : MonoBehaviour
 
     [Header("Visual")]
     [SerializeField] private float lineThickness = 5f;
+
+    [Header("Animation")]
+    [SerializeField] private float drawDuration = 0.4f;
 
     private readonly List<GameObject> createdSegments = new List<GameObject>();
 
@@ -44,7 +48,9 @@ public class CurveUI : MonoBehaviour
             Vector2 start = logicalPoints[i] - new Vector2(horizontalOffset, verticalOffset);
             Vector2 end = logicalPoints[i + 1] - new Vector2(horizontalOffset, verticalOffset);
 
-            CreateSegment(start, end, movements[i]);
+            bool animate = i == movements.Count - 1;
+
+            CreateSegment(start, end, movements[i], animate);
         }
     }
 
@@ -121,7 +127,7 @@ public class CurveUI : MonoBehaviour
         }
     }
 
-    private void CreateSegment(Vector2 start, Vector2 end, CurveMovement movement)
+    private void CreateSegment(Vector2 start, Vector2 end, CurveMovement movement, bool animate)
     {
         GameObject segment = new GameObject("CurveSegment", typeof(RectTransform), typeof(Image));
         segment.transform.SetParent(drawingArea, false);
@@ -130,6 +136,7 @@ public class CurveUI : MonoBehaviour
         Image image = segment.GetComponent<Image>();
 
         Vector2 direction = end - start;
+
         float distance = direction.magnitude;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
@@ -137,13 +144,38 @@ public class CurveUI : MonoBehaviour
         rect.anchorMax = Vector2.zero;
         rect.pivot = new Vector2(0f, 0.5f);
         rect.anchoredPosition = start;
-        rect.sizeDelta = new Vector2(distance, lineThickness);
+        rect.sizeDelta = new Vector2(animate ? 0f : distance, lineThickness);
         rect.localRotation = Quaternion.Euler(0f, 0f, angle);
 
         image.color = GetMovementColor(movement);
         image.raycastTarget = false;
 
         createdSegments.Add(segment);
+
+        if (animate)
+            StartCoroutine(AnimateSegment(rect, distance));
+    }
+
+    private IEnumerator AnimateSegment(RectTransform rect, float targetWidth)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < drawDuration)
+        {
+            if (rect == null) yield break;
+
+            elapsedTime += Time.deltaTime;
+
+            float t = Mathf.Clamp01(elapsedTime / drawDuration);
+            float smoothT = Mathf.SmoothStep(0f, 1f, t);
+
+            rect.sizeDelta = new Vector2(targetWidth * smoothT, lineThickness);
+
+            yield return null;
+        }
+
+        if (rect != null)
+            rect.sizeDelta = new Vector2(targetWidth, lineThickness);
     }
 
     private Color GetMovementColor(CurveMovement movement)
@@ -168,9 +200,12 @@ public class CurveUI : MonoBehaviour
 
     private void ClearCurve()
     {
+        StopAllCoroutines();
+
         foreach (GameObject segment in createdSegments)
         {
-            if (segment != null) Destroy(segment);
+            if (segment != null)
+                Destroy(segment);
         }
 
         createdSegments.Clear();

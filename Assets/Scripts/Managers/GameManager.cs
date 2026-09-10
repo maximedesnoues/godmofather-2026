@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject confirmationPopUp;
     [SerializeField] private GameObject itemToSell;
 
+    [Header("Calendar")]
+    [SerializeField] private GameObject calendarZone;
+    [SerializeField] private List<Sprite> calendarImages;
+
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
@@ -179,6 +183,7 @@ public class GameManager : MonoBehaviour
         gameData.wasMailOpened = false;
         gameData.currentDay++;
 
+        calendarZone.GetComponent<Image>().sprite = calendarImages[gameData.currentDay - 1];
         if (gameData.currentDay == gameData.nextMailDay)
         {
             if (gameData.nextMail.mailType == MailData.MailType.Mom)

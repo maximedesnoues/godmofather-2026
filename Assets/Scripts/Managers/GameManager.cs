@@ -61,7 +61,14 @@ public class GameManager : MonoBehaviour
     {
         _sellableUILayer = LayerMask.NameToLayer("SellableUI");
         Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
-        _moneySlider.value = gameData.currentMoney;
+
+        if (_moneySlider != null)
+        {
+            _moneySlider.minValue = 0;
+            _moneySlider.maxValue = gameData.moneyQuota;
+            _moneySlider.value = gameData.currentMoney;
+        }
+
         SaveOriginalEventProbabilities();
     }
 
@@ -101,14 +108,25 @@ public class GameManager : MonoBehaviour
     public void AddMoney(int amount)
     {
         if (amount <= 0) return;
+
         gameData.currentMoney += amount;
-        _moneySlider.value = gameData.currentMoney;
+        RefreshMoneySlider();
     }
 
     public void RemoveMoney(int amount)
     {
         if (amount <= 0) return;
+
         gameData.currentMoney = Mathf.Max(0, gameData.currentMoney - amount);
+        RefreshMoneySlider();
+    }
+
+    private void RefreshMoneySlider()
+    {
+        if (_moneySlider == null) return;
+
+        _moneySlider.maxValue = gameData.moneyQuota;
+        _moneySlider.value = gameData.currentMoney;
     }
 
     public void NextDay()
@@ -116,6 +134,12 @@ public class GameManager : MonoBehaviour
         if (IsGameOver) return;
 
         gameData.currentDay++;
+
+        if (gameData.currentDay > gameData.totalDays)
+        {
+            EndGame();
+            return;
+        }
 
         bool soldUIEffectActive = gameData.soldUICount > 0;
 
@@ -126,11 +150,6 @@ public class GameManager : MonoBehaviour
             SetEqualEventProbabilities();
         else
             RestoreOriginalEventProbabilities();
-
-        if (gameData.currentDay > gameData.totalDays)
-        {
-            EndGame();
-        }
     }
 
     private void SaveOriginalEventProbabilities()

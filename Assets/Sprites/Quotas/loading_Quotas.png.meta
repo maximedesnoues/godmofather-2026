@@ -1,0 +1,1131 @@
+fileFormatVersion: 2
+guid: 4a15cf992c239dd4e99364ad3997b617
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1494666137827466428
+    second: loading_Quotas_0
+  - first:
+      213: -744755780428848076
+    second: loading_Quotas_1
+  - first:
+      213: 8791277273677405984
+    second: loading_Quotas_2
+  - first:
+      213: 7965961964149614701
+    second: loading_Quotas_3
+  - first:
+      213: 1143475954779101400
+    second: loading_Quotas_4
+  - first:
+      213: -1970492464970731529
+    second: loading_Quotas_5
+  - first:
+      213: -1039530272050140515
+    second: loading_Quotas_6
+  - first:
+      213: 477437065022769198
+    second: loading_Quotas_7
+  - first:
+      213: 3914875629604239
+    second: loading_Quotas_8
+  - first:
+      213: 7874506171051649698
+    second: loading_Quotas_9
+  - first:
+      213: -8399070912639849700
+    second: loading_Quotas_10
+  - first:
+      213: -4950715403106620689
+    second: loading_Quotas_11
+  - first:
+      213: 9078568448811351274
+    second: loading_Quotas_12
+  - first:
+      213: 8888853170405719591
+    second: loading_Quotas_13
+  - first:
+      213: -7401175739717365416
+    second: loading_Quotas_14
+  - first:
+      213: 4548611627633836583
+    second: loading_Quotas_15
+  - first:
+      213: -9215137804704615457
+    second: loading_Quotas_16
+  - first:
+      213: -2176287650010959950
+    second: loading_Quotas_17
+  - first:
+      213: -1102804928898214567
+    second: loading_Quotas_18
+  - first:
+      213: -6122648750187077005
+    second: loading_Quotas_19
+  - first:
+      213: 4195653674638220385
+    second: loading_Quotas_20
+  - first:
+      213: -5768439547322038536
+    second: loading_Quotas_21
+  - first:
+      213: -5803598010061662579
+    second: loading_Quotas_22
+  - first:
+      213: 6056107195313836590
+    second: loading_Quotas_23
+  - first:
+      213: -1725818926800899393
+    second: loading_Quotas_24
+  - first:
+      213: -9182587091644797246
+    second: loading_Quotas_25
+  - first:
+      213: 8737978266806905810
+    second: loading_Quotas_26
+  - first:
+      213: 2521946989603354486
+    second: loading_Quotas_27
+  - first:
+      213: 3235532404088088424
+    second: loading_Quotas_28
+  - first:
+      213: -5485811888525201511
+    second: loading_Quotas_29
+  - first:
+      213: -7506847757811890514
+    second: loading_Quotas_30
+  - first:
+      213: 2873497244793274058
+    second: loading_Quotas_31
+  - first:
+      213: -1235225183413345552
+    second: loading_Quotas_32
+  - first:
+      213: -6169223950550980925
+    second: loading_Quotas_33
+  - first:
+      213: 4626001126385577545
+    second: loading_Quotas_34
+  - first:
+      213: -7821364967886623132
+    second: loading_Quotas_35
+  - first:
+      213: 7613729681332801251
+    second: loading_Quotas_36
+  - first:
+      213: -3772905009086726086
+    second: loading_Quotas_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: loading_Quotas_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4432df41111e14be0800000000000000
+      internalID: -1494666137827466428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_1
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434ae1740981aa5f0800000000000000
+      internalID: -744755780428848076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f918b2a14e00a70800000000000000
+      internalID: 8791277273677405984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d68296f6338cc8e60800000000000000
+      internalID: 7965961964149614701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d81fcd82517edf00800000000000000
+      internalID: 1143475954779101400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_5
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffe5d01b8767a4e0800000000000000
+      internalID: -1970492464970731529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9aaf29a9b8d291f0800000000000000
+      internalID: -1039530272050140515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_7
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2889472b7230a600800000000000000
+      internalID: 477437065022769198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d0e330f88ed0000800000000000000
+      internalID: 3914875629604239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aaa72344add74d60800000000000000
+      internalID: 7874506171051649698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_10
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b29c05181807b80800000000000000
+      internalID: -8399070912639849700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea66c522968b4bb0800000000000000
+      internalID: -4950715403106620689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_12
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec387467ed8dfd70800000000000000
+      internalID: 9078568448811351274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_13
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72e33a20ddc8b5b70800000000000000
+      internalID: 8888853170405719591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85158e9b0edb94990800000000000000
+      internalID: -7401175739717365416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722835efc2aef1f30800000000000000
+      internalID: 4548611627633836583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_16
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3fe429df04d1080800000000000000
+      internalID: -9215137804704615457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bfe60ca9e54cc1e0800000000000000
+      internalID: -2176287650010959950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_18
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 955d87492cc02b0f0800000000000000
+      internalID: -1102804928898214567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3722c90a66bf70ba0800000000000000
+      internalID: -6122648750187077005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_20
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c9f5d99c4f93a30800000000000000
+      internalID: 4195653674638220385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f60e815bc262ffa0800000000000000
+      internalID: -5768439547322038536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_22
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d865c1fcb5a757fa0800000000000000
+      internalID: -5803598010061662579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e225e52586d9b0450800000000000000
+      internalID: 6056107195313836590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_24
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2f26174d8ac08e0800000000000000
+      internalID: -1725818926800899393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_25
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ceac6b01b5e09080800000000000000
+      internalID: -9182587091644797246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dbeb1810f8834970800000000000000
+      internalID: 8737978266806905810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_27
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6777ca9dc61cff220800000000000000
+      internalID: 2521946989603354486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867afe4349be6ec20800000000000000
+      internalID: 3235532404088088424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_29
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f27d7072b7ed3b0800000000000000
+      internalID: -5485811888525201511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_30
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea64facbcb152d790800000000000000
+      internalID: -7506847757811890514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace77fa0586b0e720800000000000000
+      internalID: 2873497244793274058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_32
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2e70d7d399bdee0800000000000000
+      internalID: -1235225183413345552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_33
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6a39fb083826aa0800000000000000
+      internalID: -6169223950550980925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_34
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ee4ccc38bd23040800000000000000
+      internalID: 4626001126385577545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_35
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46eee66400ee47390800000000000000
+      internalID: -7821364967886623132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_36
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee80bf4ec669a960800000000000000
+      internalID: 7613729681332801251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: loading_Quotas_37
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 5
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30081a42e2f3abc0800000000000000
+      internalID: -3772905009086726086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      loading_Quotas_0: -1494666137827466428
+      loading_Quotas_1: -744755780428848076
+      loading_Quotas_10: -8399070912639849700
+      loading_Quotas_11: -4950715403106620689
+      loading_Quotas_12: 9078568448811351274
+      loading_Quotas_13: 8888853170405719591
+      loading_Quotas_14: -7401175739717365416
+      loading_Quotas_15: 4548611627633836583
+      loading_Quotas_16: -9215137804704615457
+      loading_Quotas_17: -2176287650010959950
+      loading_Quotas_18: -1102804928898214567
+      loading_Quotas_19: -6122648750187077005
+      loading_Quotas_2: 8791277273677405984
+      loading_Quotas_20: 4195653674638220385
+      loading_Quotas_21: -5768439547322038536
+      loading_Quotas_22: -5803598010061662579
+      loading_Quotas_23: 6056107195313836590
+      loading_Quotas_24: -1725818926800899393
+      loading_Quotas_25: -9182587091644797246
+      loading_Quotas_26: 8737978266806905810
+      loading_Quotas_27: 2521946989603354486
+      loading_Quotas_28: 3235532404088088424
+      loading_Quotas_29: -5485811888525201511
+      loading_Quotas_3: 7965961964149614701
+      loading_Quotas_30: -7506847757811890514
+      loading_Quotas_31: 2873497244793274058
+      loading_Quotas_32: -1235225183413345552
+      loading_Quotas_33: -6169223950550980925
+      loading_Quotas_34: 4626001126385577545
+      loading_Quotas_35: -7821364967886623132
+      loading_Quotas_36: 7613729681332801251
+      loading_Quotas_37: -3772905009086726086
+      loading_Quotas_4: 1143475954779101400
+      loading_Quotas_5: -1970492464970731529
+      loading_Quotas_6: -1039530272050140515
+      loading_Quotas_7: 477437065022769198
+      loading_Quotas_8: 3914875629604239
+      loading_Quotas_9: 7874506171051649698
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

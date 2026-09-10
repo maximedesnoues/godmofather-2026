@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -21,6 +22,12 @@ public class GameManager : MonoBehaviour
     [Header("Game Data")]
     [SerializeField] private GameData gameData = new GameData();
 
+    [Header("Mail")]
+    [SerializeField] private GameObject mailZone;
+    [SerializeField] private GameObject mailTitle;
+    [SerializeField] private GameObject mailText;
+    [SerializeField] private GameObject oneButton;
+    [SerializeField] private GameObject twoButton;
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
@@ -59,7 +66,10 @@ public class GameManager : MonoBehaviour
                 Cursor.SetCursor(_sellCursorTexture, Vector2.zero, CursorMode.Auto);
 
                 if (Mouse.current.leftButton.wasPressedThisFrame)
-                {
+                { 
+                    ///
+                    /// TO DO : check need confirmation pop up 
+                    ///
                     _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
                     AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                     _currentSellableObject.SetActive(false);
@@ -91,8 +101,13 @@ public class GameManager : MonoBehaviour
     {
         if (IsGameOver) return;
 
+        gameData.wasMailOpened = false;
         gameData.currentDay++;
 
+        if (gameData.currentDay == gameData.nextMailDay)
+        {
+            // TO DO : changement icone mail notification
+        }
         // TO DO :  si Data.soldUICount > 0 alors proba event 20% partout 
 
         if (gameData.currentDay > gameData.totalDays)
@@ -111,6 +126,45 @@ public class GameManager : MonoBehaviour
         else
             Debug.Log("Défaite : quota non atteint.");
     }
+
+    public void OpenMail()
+    {
+        if (gameData.currentDay != gameData.nextMailDay || gameData.wasMailOpened) return;
+
+        gameData.wasMailOpened = true;
+
+        mailZone.SetActive(true);
+        mailTitle.GetComponent<TextMeshProUGUI>().text = gameData.nextMail.title;
+        mailText.GetComponent<TextMeshProUGUI>().text = gameData.nextMail.content;
+        if (gameData.nextMail.mailType == MailData.MailType.Story)
+        {
+            oneButton.SetActive(false);
+            twoButton.SetActive(true);
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gameData.nextMail.leftButtonText;
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[2].text = gameData.nextMail.rightButtonText;
+        }
+        else
+        {
+            oneButton.SetActive(true);
+            twoButton.SetActive(false);
+            oneButton.GetComponent<TextMeshProUGUI>().text = gameData.nextMail.leftButtonText;
+        }
+        gameData.nextMailDay = gameData.nextMail.nextMailDay;
+    }
+
+    public void CloseMailGood()
+    {
+        mailZone.SetActive(false);
+        gameData.nextMail = gameData.nextMail.nextMailGood;
+        Debug.Log("Good");
+    }
+    public void CloseMailBad()
+    {
+        mailZone.SetActive(false);
+        gameData.nextMail = gameData.nextMail.nextMailBad;
+        Debug.Log("Bad");
+    }
+
 
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {

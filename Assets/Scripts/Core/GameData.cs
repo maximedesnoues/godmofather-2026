@@ -9,6 +9,15 @@ public class GameData
     [Min(0)] public int moneyQuota = 300000;
     [Min(0)] public int soldUICount = 0;
 
+    [Header("Karma")]
+    public int karma = 0;
+
+
+    [Header("Mail")]
+    public MailData nextMail;
+    public int nextMailDay = 2;
+    public bool wasMailOpened = false;
+
     [Header("Time")]
     [Min(1)] public int currentDay = 1;
     [Min(1)] public int totalDays = 10;

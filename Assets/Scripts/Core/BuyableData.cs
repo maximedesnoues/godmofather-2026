@@ -13,8 +13,8 @@ public class BuyableData : ScriptableObject
         public int value;
         [Header("Ne pas toucher")]
         public bool isBuyable;
+        public bool needConfirmation;
     }
     public List<Buyable> data = new();
     public GameObject emptySapce;
-    public bool needConfirmation;
 }

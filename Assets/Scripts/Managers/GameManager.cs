@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameData gameData = new GameData();
 
     [Header("Mail")]
+    [SerializeField] private GameObject mailNotificationIcon;
+    [SerializeField] private Texture2D mailNotificationIconMom;
+    [SerializeField] private Texture2D mailNotificationIconBoss;
+    [SerializeField] private Texture2D mailNotificationIconStory;
     [SerializeField] private GameObject mailZone;
     [SerializeField] private GameObject mailTitle;
     [SerializeField] private GameObject mailText;
@@ -67,14 +71,21 @@ public class GameManager : MonoBehaviour
 
                 if (Mouse.current.leftButton.wasPressedThisFrame)
                 { 
-                    ///
-                    /// TO DO : check need confirmation pop up 
-                    ///
-                    _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
-                    AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
-                    _currentSellableObject.SetActive(false);
-                    Data.soldUICount++;
-                    Debug.Log("Clicked on: " + _currentSellableObject.name);
+                    if( (_buyableData.data.Find(x => x.name == _currentSellableObject.name).needConfirmation))
+                        {
+                        Debug.Log("Need confirmation for: " + _currentSellableObject.name);
+                        // Show confirmation pop-up here
+                        // If confirmed, proceed with selling
+                    }
+                    else
+                    {
+                        Debug.Log("No confirmation needed for: " + _currentSellableObject.name);
+                        _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
+                        AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
+                        _currentSellableObject.SetActive(false);
+                        Data.soldUICount++;
+                        Debug.Log("Clicked on: " + _currentSellableObject.name);
+                    }
                 }
             }
             else
@@ -106,9 +117,13 @@ public class GameManager : MonoBehaviour
 
         if (gameData.currentDay == gameData.nextMailDay)
         {
-            // TO DO : changement icone mail notification
+            if (gameData.nextMail.mailType == MailData.MailType.Mom)
+                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconMom;
+            else if (gameData.nextMail.mailType == MailData.MailType.Boss)
+                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconBoss;
+            else if (gameData.nextMail.mailType == MailData.MailType.Story)
+                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconStory;
         }
-        // TO DO :  si Data.soldUICount > 0 alors proba event 20% partout 
 
         if (gameData.currentDay > gameData.totalDays)
         {

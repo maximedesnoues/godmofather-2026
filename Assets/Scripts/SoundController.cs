@@ -24,9 +24,9 @@ public class SoundController : MonoBehaviour
         _audioSource.volume = _soundSlider.value;
         _soundText.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(_soundSlider.value * 100) + "%";
     }
-    private void OnDisable()
+    private void OnDestroy()
     {
-        Debug.Log("SoundController disabled, resetting volume to 0");
+        Debug.Log("SoundController destroyed, resetting volume to 0");
         _audioSource.volume = 0;
         _soundText.GetComponent<TextMeshProUGUI>().text = "0%";
     }

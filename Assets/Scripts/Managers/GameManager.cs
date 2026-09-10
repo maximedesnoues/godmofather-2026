@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Mail")]
     [SerializeField] private GameObject mailNotificationIcon;
+    [SerializeField] private Texture2D mailNotificationIconBase;
     [SerializeField] private Texture2D mailNotificationIconMom;
     [SerializeField] private Texture2D mailNotificationIconBoss;
     [SerializeField] private Texture2D mailNotificationIconStory;
@@ -120,7 +121,7 @@ public class GameManager : MonoBehaviour
                         Debug.Log("No confirmation needed for: " + _currentSellableObject.name);
                         _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
                         AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
-                        _currentSellableObject.SetActive(false);
+                        Destroy(_currentSellableObject);
                         Data.soldUICount++;
                         Debug.Log("Clicked on: " + _currentSellableObject.name);
                     }
@@ -139,7 +140,7 @@ public class GameManager : MonoBehaviour
         {
             _buyableData.data.Find(x => x.name == itemToSell.name).isBuyable = true;
             AddMoney(_buyableData.data.Find(x => x.name == itemToSell.name).value);
-            itemToSell.SetActive(false);
+            Destroy(itemToSell);
             Data.soldUICount++;
             Debug.Log("Confirmed sell for: " + itemToSell.name);
             itemToSell = null;

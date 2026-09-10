@@ -31,5 +31,5 @@ public class GameData
     public int DaysRemaining => Mathf.Max(0, totalDays - currentDay);
     public int MoneyRemainingToQuota => Mathf.Max(0, moneyQuota - currentMoney);
     public bool QuotaReached => currentMoney >= moneyQuota;
-    public bool CanPredict => currentDay >= 2;
+    public bool CanPredict => currentDay >= 1 && currentDay <= totalDays;
 }

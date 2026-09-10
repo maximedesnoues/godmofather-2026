@@ -27,6 +27,7 @@ public class MarketUI : MonoBehaviour
     private void Update()
     {
         RefreshPredictionControls();
+        RefreshMoney();
     }
 
     public void RefreshAll()
@@ -49,7 +50,7 @@ public class MarketUI : MonoBehaviour
     {
         if (GameManager.Instance == null || marketManager == null) return;
 
-        bool canPredict = GameManager.Instance.Data.currentDay >= 2 && !marketManager.PredictionValidated;
+        bool canPredict = GameManager.Instance.Data.CanPredict && !marketManager.PredictionValidated;
 
         if (strongDownButton != null) strongDownButton.interactable = canPredict;
         if (downButton != null) downButton.interactable = canPredict;

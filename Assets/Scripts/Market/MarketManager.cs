@@ -6,6 +6,7 @@ public class MarketManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private CurveManager curveManager;
     [SerializeField] private MarketUI marketUI;
+    [SerializeField] private EventUI eventUI;
 
     [Header("Available Events")]
     [SerializeField] private MarketEventData[] availableEvents;
@@ -29,7 +30,13 @@ public class MarketManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame) EndDay();
+        if (Keyboard.current == null) return;
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && eventUI != null)
+            eventUI.ToggleEventWindow();
+
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+            EndDay();
     }
 
     public void StartDay()
@@ -60,7 +67,11 @@ public class MarketManager : MonoBehaviour
             Debug.Log("Aucun indice aujourd'hui.");
         }
 
-        if (marketUI != null) marketUI.RefreshAll();
+        if (eventUI != null)
+            eventUI.SetEvent(CurrentEvent, HasHint, HintMovement);
+
+        if (marketUI != null)
+            marketUI.RefreshAll();
     }
 
     private void GenerateRandomEvent()
@@ -131,13 +142,8 @@ public class MarketManager : MonoBehaviour
 
     public void SelectPrediction(CurveMovement prediction)
     {
-        if (!GameManager.Instance.Data.CanPredict)
-        {
-            Debug.Log("Les pronostics commencent au jour 2.");
+        if (!GameManager.Instance.Data.CanPredict || PredictionValidated)
             return;
-        }
-
-        if (PredictionValidated) return;
 
         GameManager.Instance.Data.playerPrediction = prediction;
         GameManager.Instance.Data.hasPrediction = true;
@@ -198,33 +204,34 @@ public class MarketManager : MonoBehaviour
 
     public void EndDay()
     {
-        GameData data = GameManager.Instance.Data;
+        if (GameManager.Instance.IsGameOver)
+            return;
 
-        if (data.currentDay >= 2 && !PredictionValidated)
+        if (!PredictionValidated)
         {
             Debug.Log("Impossible de terminer la journée : sélectionne un pronostic, entre une mise puis clique sur VALIDER.");
             return;
         }
 
-        Debug.Log($"===== FIN DU JOUR {data.currentDay} =====");
+        Debug.Log($"===== FIN DU JOUR {GameManager.Instance.Data.currentDay} =====");
 
         ResolveCurrentDay();
         GameManager.Instance.NextDay();
 
-        if (!GameManager.Instance.IsGameOver) StartDay();
+        if (!GameManager.Instance.IsGameOver)
+            StartDay();
     }
 
     private void ResolveCurrentDay()
     {
-        GameData data = GameManager.Instance.Data;
-
-        if (data.currentDay >= 2) ResolveBet();
+        ResolveBet();
 
         curveManager.ApplyMovement(HiddenMovement);
 
         Debug.Log($"Résultat réel : {MovementToString(HiddenMovement)}");
 
-        if (marketUI != null) marketUI.RefreshAll();
+        if (marketUI != null)
+            marketUI.RefreshAll();
     }
 
     private void ResolveBet()

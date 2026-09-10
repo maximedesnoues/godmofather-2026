@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaed558efda80ef4786576bd2900636f, type: 3}
+  m_Name: MarketEvent_Scandal
+  m_EditorClassIdentifier: Assembly-CSharp::MarketEventData
+  eventTitle: Scandale financier
+  eventDescription: "Des informations compromettantes concernant une grande entreprise
+    viennent d'\xEAtre r\xE9v\xE9l\xE9es. Les investisseurs commencent \xE0 paniquer
+    et plusieurs analystes craignent une chute importante du cours."
+  strongUpProbability: 5
+  upProbability: 5
+  stableProbability: 10
+  downProbability: 45
+  strongDownProbability: 35

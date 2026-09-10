@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameData
 {
     [Header("Money")]
-    [Min(0)] public int currentMoney = 1000;
-    [Min(0)] public int moneyQuota = 10000;
+    [Min(0)] public int currentMoney = 100000;
+    [Min(0)] public int moneyQuota = 300000;
     [Min(0)] public int soldUICount = 0;
 
     [Header("Time")]

@@ -16,43 +16,57 @@ MonoBehaviour:
   - name: SliderSon
     value: 50
     isBuyable: 1
+    needConfirmation: 1
   - name: Producer
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Camille
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Programers
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Sarah
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Maxime
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Designers
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Loic
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Matteo
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Artists
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Emma
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Elise
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: Credit
     value: 50
     isBuyable: 1
+    needConfirmation: 0
   - name: resoChoice
     value: 50
     isBuyable: 1
+    needConfirmation: 1
   emptySapce: {fileID: 4237431106115338007, guid: efb9624ba41545d499e6cd46940955db, type: 3}

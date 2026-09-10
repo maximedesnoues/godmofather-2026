@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mailText;
     [SerializeField] private GameObject oneButton;
     [SerializeField] private GameObject twoButton;
+
+    [Header("Confirmation Pop Up")]
+    [SerializeField] private GameObject confirmationPopUp;
+    [SerializeField] private GameObject itemToSell;
+
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
@@ -83,6 +88,7 @@ public class GameManager : MonoBehaviour
         {
             canvasGroup.interactable = !_isSellingMode;
         }
+        Cursor.SetCursor(_isSellingMode ? _sellCursorTexture : _CursorTexture, Vector2.zero, CursorMode.Auto);
     }
     private void Update()
     {
@@ -98,8 +104,9 @@ public class GameManager : MonoBehaviour
                     if( (_buyableData.data.Find(x => x.name == _currentSellableObject.name).needConfirmation))
                         {
                         Debug.Log("Need confirmation for: " + _currentSellableObject.name);
-                        // Show confirmation pop-up here
-                        // If confirmed, proceed with selling
+                        confirmationPopUp.SetActive(true);
+                        itemToSell = _currentSellableObject;
+                        ToggleSellingMode();
                     }
                     else
                     {
@@ -118,6 +125,20 @@ public class GameManager : MonoBehaviour
                 Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
             }
         }
+    }
+    public void ConfirmSell()
+    {
+        if (itemToSell != null)
+        {
+            _buyableData.data.Find(x => x.name == itemToSell.name).isBuyable = true;
+            AddMoney(_buyableData.data.Find(x => x.name == itemToSell.name).value);
+            itemToSell.SetActive(false);
+            Data.soldUICount++;
+            Debug.Log("Confirmed sell for: " + itemToSell.name);
+            itemToSell = null;
+        }
+        ToggleSellingMode();
+        confirmationPopUp.SetActive(false);
     }
     public void AddMoney(int amount)
     {

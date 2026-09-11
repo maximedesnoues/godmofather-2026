@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Slider _moneySlider;
 
+    [SerializeField] private MosquitoPopup mosquitoPopup;
+
     [Header("Market Events")]
     [SerializeField] private List<MarketEventData> _marketEvents;
     [SerializeField] private GameObject sellHalo;
@@ -180,6 +182,13 @@ public class GameManager : MonoBehaviour
 
         gameData.wasMailOpened = false;
         gameData.currentDay++;
+
+        if (gameData.currentDay == 12 && mosquitoPopup != null)
+        {
+            mosquitoPopup.OpenPopup();
+        }
+
+        if (gameData.currentDay > gameData.totalDays)
         Debug.Log("Day: " + gameData.currentDay);
         Debug.Log("Mail day : " + gameData.nextMailDay);
         if (gameData.currentDay == gameData.nextMailDay)

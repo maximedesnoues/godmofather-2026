@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class EventUI : MonoBehaviour
 {
+    [Header("Application")]
+    [SerializeField] private GameObject applicationPanel;
+
     [Header("Event Preview")]
     [SerializeField] private TMP_Text eventPreviewTitle;
 
@@ -15,10 +18,11 @@ public class EventUI : MonoBehaviour
     private MarketEventData currentEvent;
     private bool hasHint;
     private CurveMovement hintMovement;
+    private string currentHintText;
 
     private void Start()
     {
-        CloseEventWindow();
+        applicationPanel.SetActive(false);
     }
 
     public void SetEvent(MarketEventData marketEvent, bool newHasHint, CurveMovement newHintMovement)
@@ -27,8 +31,7 @@ public class EventUI : MonoBehaviour
         hasHint = newHasHint;
         hintMovement = newHintMovement;
 
-        if (currentEvent == null)
-            return;
+        if (currentEvent == null) return;
 
         if (eventPreviewTitle != null)
             eventPreviewTitle.text = currentEvent.eventTitle;
@@ -40,38 +43,29 @@ public class EventUI : MonoBehaviour
             eventDescriptionText.text = currentEvent.eventDescription;
 
         RefreshHint();
-
-        CloseEventWindow();
     }
 
     private void RefreshHint()
     {
-        if (hintText == null)
-            return;
+        if (hintText == null || currentEvent == null) return;
+
+        hintText.gameObject.SetActive(true);
 
         if (!hasHint)
         {
-            hintText.gameObject.SetActive(false);
+            hintText.text = "";
             return;
         }
 
-        hintText.gameObject.SetActive(true);
-        hintText.text = $"Analyse du marché : tendance estimée {MarketManager.MovementToString(hintMovement)}";
-    }
-
-    public void ToggleEventWindow()
-    {
-        if (eventWindow == null || currentEvent == null)
-            return;
-
-        eventWindow.SetActive(!eventWindow.activeSelf);
+        hintText.text = currentEvent.hintText;
     }
 
     public void OpenEventWindow()
     {
-        if (eventWindow == null || currentEvent == null)
+        if (applicationPanel == null || eventWindow == null || currentEvent == null)
             return;
 
+        applicationPanel.SetActive(true);
         eventWindow.SetActive(true);
     }
 
@@ -79,5 +73,19 @@ public class EventUI : MonoBehaviour
     {
         if (eventWindow != null)
             eventWindow.SetActive(false);
+
+        if (applicationPanel != null)
+            applicationPanel.SetActive(false);
+    }
+
+    public void ToggleEventWindow()
+    {
+        if (applicationPanel == null || eventWindow == null || currentEvent == null)
+            return;
+
+        if (applicationPanel.activeSelf)
+            CloseEventWindow();
+        else
+            OpenEventWindow();
     }
 }

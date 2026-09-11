@@ -18,10 +18,10 @@ MonoBehaviour:
     choisir comment g\xE9rer les imp\xF4ts de l\u2019entreprise."
   leftButtonText: Payer les impo
   leftButtonMoney: 0
-  leftButtonKarma: 0
+  leftButtonKarma: -2
   rightButtonText: fausse signature
   rightButtonMoney: 0
-  rightButtonKarma: 1
-  nextMailGood: {fileID: 11400000, guid: 9c50ef2e13701d0468fd83c2b8feb116, type: 2}
-  nextMailBad: {fileID: 11400000, guid: 2b3ceb05b05eff344af1b71799881a4a, type: 2}
+  rightButtonKarma: 0
+  nextMailGood: {fileID: 11400000, guid: 54009d985032ea94b81054cc5258676a, type: 2}
+  nextMailBad: {fileID: 11400000, guid: c5b983fb327e17c46a9e404178910e4c, type: 2}
   nextMailDay: 10

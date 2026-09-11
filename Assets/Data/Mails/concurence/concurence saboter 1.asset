@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: concurence saboter 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
-  title: 
-  content: 
-  leftButtonText: 
+  title: Quel horreur !
+  content: "C'est horible ! l'une de vos entreprise voisine \xE0 exploser hier. la
+    police dis que personne ne sait se qu'il c'est passer. Bon je sais que c'\xE9tait
+    l'un de vos concurent mais il ne m\xE9rit\xE9 pas \xE7a. j'esp\xE8re que \xE7a
+    n'auras pas trop de cons\xE9quence sur votre marcher."
+  leftButtonText: "Ne t'inqui\xE8te pas , nous n'y somme pour rien et \xE7a devrais
+    aller pour nous."
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: fausse signature

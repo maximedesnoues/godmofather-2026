@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaed558efda80ef4786576bd2900636f, type: 3}
+  m_Name: "Salaire employ\xE9s"
+  m_EditorClassIdentifier: Assembly-CSharp::MarketEventData
+  eventTitle: "Salaire employ\xE9s"
+  eventDescription: "Afin de maintenir une bonne ambiance au sein de l\u2019entreprise
+    et de renforcer la motivation des salari\xE9s, nous vous recommandons d\u2019accorder
+    une augmentation g\xE9n\xE9rale des salaires.\nCette mesure permettra d\u2019am\xE9liorer
+    le moral des employ\xE9s et leur implication dans leur travail."
+  hintText: "Le salari\xE9s seront-ils satisfait ?"
+  strongUpProbability: 15
+  upProbability: 35
+  stableProbability: 20
+  downProbability: 20
+  strongDownProbability: 10

@@ -117,11 +117,7 @@ public class MarketManager : MonoBehaviour
 
     private void GenerateHint()
     {
-        HasHint = Random.value < hintChance;
-        HintIsWrong = false;
-
-        if (!HasHint) return;
-
+        HasHint = true;
         HintIsWrong = Random.value < wrongHintChance;
 
         if (HintIsWrong)

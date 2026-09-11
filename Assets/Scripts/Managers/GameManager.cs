@@ -55,6 +55,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip goodProno;
     [SerializeField] private AudioClip badProno;
     [SerializeField] private AudioClip newDay;
+    [SerializeField] private AudioClip music;
+
+    [Header("Fin de partie")]
+    [SerializeField] private GameObject endGameCanvas;
+    [SerializeField] private GameObject endGameText;
+    [SerializeField] private GameObject endGameTextMom;
+
 
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
@@ -100,7 +107,6 @@ public class GameManager : MonoBehaviour
             _moneySlider.maxValue = gameData.moneyQuota;
             _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
         }
-
         SaveOriginalEventProbabilities();
     }
 
@@ -207,7 +213,6 @@ public class GameManager : MonoBehaviour
         if (gameData.currentDay == gameData.nextMailDay)
         {
             audioSource.PlayOneShot(notif);
-            Debug.Log("Mail received: " + gameData.nextMail.mailType);
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
                 mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconMom;
             else if (gameData.nextMail.mailType == MailData.MailType.Boss)
@@ -272,6 +277,13 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         IsGameOver = true;
+        if (gameData.karma <= 0)
+        {
+            endGameText.GetComponent<TextMeshProUGUI>().text = "Vous avez été viré !";
+            endGameTextMom.SetActive(true);
+        }
+
+        endGameCanvas.SetActive(true);
         Debug.Log("===== FIN DE PARTIE =====");
 
         if (gameData.QuotaReached)
@@ -311,12 +323,16 @@ public class GameManager : MonoBehaviour
     {
         mailZone.SetActive(false);
         mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
+        AddMoney(gameData.nextMail.leftButtonMoney);
+        gameData.karma += gameData.nextMail.leftButtonKarma;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        AddMoney(gameData.nextMail.rightButtonMoney);
+        gameData.karma += gameData.nextMail.rightButtonKarma;
         mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaed558efda80ef4786576bd2900636f, type: 3}
+  m_Name: "Publicit\xE9"
+  m_EditorClassIdentifier: Assembly-CSharp::MarketEventData
+  eventTitle: "Publicit\xE9"
+  eventDescription: "Notre derni\xE8re campagne publicitaire a rencontr\xE9 un franc
+    succ\xE8s ! L\u2019entreprise a gagn\xE9 en visibilit\xE9 et sa r\xE9putation
+    aupr\xE8s du public s\u2019est consid\xE9rablement am\xE9lior\xE9e."
+  hintText: "80% r\xE9ussite\n20% super r\xE9ussite"
+  strongUpProbability: 20
+  upProbability: 80
+  stableProbability: 0
+  downProbability: 0
+  strongDownProbability: 0

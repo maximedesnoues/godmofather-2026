@@ -48,6 +48,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject calendarZone;
     [SerializeField] private List<Sprite> calendarImages;
 
+    [Header("Sons")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip vente;
+    [SerializeField] private AudioClip notif;
+    [SerializeField] private AudioClip goodProno;
+    [SerializeField] private AudioClip badProno;
+    [SerializeField] private AudioClip newDay;
+
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
@@ -128,6 +136,7 @@ public class GameManager : MonoBehaviour
                         AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                         Destroy(_currentSellableObject);
                         Data.soldUICount++;
+                        audioSource.PlayOneShot(vente);
                     }
                 }
             }
@@ -147,6 +156,7 @@ public class GameManager : MonoBehaviour
             Data.soldUICount++;
             itemToSell = null;
         }
+        audioSource.PlayOneShot(vente);
         ToggleSellingMode();
         confirmationPopUp.SetActive(false);
     }
@@ -190,6 +200,7 @@ public class GameManager : MonoBehaviour
 
         if (gameData.currentDay == gameData.nextMailDay)
         {
+            audioSource.PlayOneShot(notif);
             Debug.Log("Mail received: " + gameData.nextMail.mailType);
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
                 mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconMom;

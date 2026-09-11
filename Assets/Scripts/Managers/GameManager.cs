@@ -57,6 +57,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip newDay;
     [SerializeField] private AudioClip music;
 
+    [Header("Fin de partie")]
+    [SerializeField] private GameObject endGameCanvas;
+    [SerializeField] private GameObject endGameText;
+    [SerializeField] private GameObject endGameTextMom;
+
 
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
@@ -208,7 +213,6 @@ public class GameManager : MonoBehaviour
         if (gameData.currentDay == gameData.nextMailDay)
         {
             audioSource.PlayOneShot(notif);
-            Debug.Log("Mail received: " + gameData.nextMail.mailType);
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
                 mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconMom;
             else if (gameData.nextMail.mailType == MailData.MailType.Boss)
@@ -273,6 +277,13 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         IsGameOver = true;
+        if (gameData.karma <= 0)
+        {
+            endGameText.GetComponent<TextMeshProUGUI>().text = "Vous avez été viré !";
+            endGameTextMom.SetActive(true);
+        }
+
+        endGameCanvas.SetActive(true);
         Debug.Log("===== FIN DE PARTIE =====");
 
         if (gameData.QuotaReached)

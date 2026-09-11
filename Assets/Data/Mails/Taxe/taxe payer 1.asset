@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c50a8a2f81707c4f8db29ac8092433e, type: 3}
+  m_Name: taxe payer 1
+  m_EditorClassIdentifier: Assembly-CSharp::MailData
+  mailType: 1
+  title: "De l'argents jeter par la fen\xEAtre"
+  content: "Vous avez donn\xE9 notre argent \xE0 l'\xC9tat sans m\xEAme r\xE9fl\xE9chir.
+    J'esp\xE8re que votre honn\xEAtet\xE9 vous fait vous sentir mieux, parce qu'elle
+    ne nous rapporte rien. N'oubliez pas que j'ai TOUS les droits sur vous. R\xE9fl\xE9chissez
+    mieux la prochaine fois."
+  leftButtonText: Fermer les yeux dessus.
+  leftButtonMoney: 0
+  leftButtonKarma: 0
+  rightButtonText: "Le d\xE9noncer !"
+  rightButtonMoney: 0
+  rightButtonKarma: 1
+  nextMailGood: {fileID: 11400000, guid: ba37933e7c0b5ef40bf26ff13431340f, type: 2}
+  nextMailBad: {fileID: 11400000, guid: 2b3ceb05b05eff344af1b71799881a4a, type: 2}
+  nextMailDay: 6

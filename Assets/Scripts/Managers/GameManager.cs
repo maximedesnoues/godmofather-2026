@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject mailText;
     [SerializeField] private GameObject oneButton;
     [SerializeField] private GameObject twoButton;
+
+    [Header("Confirmation Pop Up")]
+    [SerializeField] private GameObject confirmationPopUp;
+    [SerializeField] private GameObject itemToSell;
+
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
 
@@ -72,7 +77,14 @@ public class GameManager : MonoBehaviour
     {
         _sellableUILayer = LayerMask.NameToLayer("SellableUI");
         Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
-        _moneySlider.value = gameData.currentMoney;
+
+        if (_moneySlider != null)
+        {
+            _moneySlider.minValue = 0;
+            _moneySlider.maxValue = gameData.moneyQuota;
+            _moneySlider.value = gameData.currentMoney;
+        }
+
         SaveOriginalEventProbabilities();
     }
 
@@ -83,6 +95,7 @@ public class GameManager : MonoBehaviour
         {
             canvasGroup.interactable = !_isSellingMode;
         }
+        Cursor.SetCursor(_isSellingMode ? _sellCursorTexture : _CursorTexture, Vector2.zero, CursorMode.Auto);
     }
     private void Update()
     {
@@ -98,8 +111,9 @@ public class GameManager : MonoBehaviour
                     if( (_buyableData.data.Find(x => x.name == _currentSellableObject.name).needConfirmation))
                         {
                         Debug.Log("Need confirmation for: " + _currentSellableObject.name);
-                        // Show confirmation pop-up here
-                        // If confirmed, proceed with selling
+                        confirmationPopUp.SetActive(true);
+                        itemToSell = _currentSellableObject;
+                        ToggleSellingMode();
                     }
                     else
                     {
@@ -119,17 +133,42 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void ConfirmSell()
+    {
+        if (itemToSell != null)
+        {
+            _buyableData.data.Find(x => x.name == itemToSell.name).isBuyable = true;
+            AddMoney(_buyableData.data.Find(x => x.name == itemToSell.name).value);
+            itemToSell.SetActive(false);
+            Data.soldUICount++;
+            Debug.Log("Confirmed sell for: " + itemToSell.name);
+            itemToSell = null;
+        }
+        ToggleSellingMode();
+        confirmationPopUp.SetActive(false);
+    }
     public void AddMoney(int amount)
     {
         if (amount <= 0) return;
+
         gameData.currentMoney += amount;
-        _moneySlider.value = gameData.currentMoney;
+        RefreshMoneySlider();
     }
 
     public void RemoveMoney(int amount)
     {
         if (amount <= 0) return;
+
         gameData.currentMoney = Mathf.Max(0, gameData.currentMoney - amount);
+        RefreshMoneySlider();
+    }
+
+    private void RefreshMoneySlider()
+    {
+        if (_moneySlider == null) return;
+
+        _moneySlider.maxValue = gameData.moneyQuota;
+        _moneySlider.value = gameData.currentMoney;
     }
 
     public void NextDay()
@@ -157,11 +196,6 @@ public class GameManager : MonoBehaviour
             SetEqualEventProbabilities();
         else
             RestoreOriginalEventProbabilities();
-
-        if (gameData.currentDay > gameData.totalDays)
-        {
-            EndGame();
-        }
     }
 
     private void SaveOriginalEventProbabilities()

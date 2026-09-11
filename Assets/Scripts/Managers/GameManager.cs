@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip goodProno;
     [SerializeField] private AudioClip badProno;
     [SerializeField] private AudioClip newDay;
+    [SerializeField] private AudioClip music;
+
 
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
@@ -100,7 +102,6 @@ public class GameManager : MonoBehaviour
             _moneySlider.maxValue = gameData.moneyQuota;
             _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
         }
-
         SaveOriginalEventProbabilities();
     }
 

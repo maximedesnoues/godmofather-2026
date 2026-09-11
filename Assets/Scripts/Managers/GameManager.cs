@@ -193,6 +193,12 @@ public class GameManager : MonoBehaviour
         gameData.wasMailOpened = false;
         gameData.currentDay++;
 
+        if (gameData.currentDay > gameData.totalDays)
+        {
+            EndGame();
+            return;
+        }
+
         if (gameData.currentDay == 12 && mosquitoPopup != null)
         {
             mosquitoPopup.OpenPopup();

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaed558efda80ef4786576bd2900636f, type: 3}
-  m_Name: MarketEvent_Uncertainty
+  m_Name: Fake News
   m_EditorClassIdentifier: Assembly-CSharp::MarketEventData
-  eventTitle: "March\xE9 dans l'attente"
-  eventDescription: "Les investisseurs attendent une annonce importante. Aucune tendance
-    claire ne se d\xE9gage pour le moment et le march\xE9 reste particuli\xE8rement
-    h\xE9sitant."
-  strongUpProbability: 10
+  eventTitle: Fake News
+  eventDescription: "Diffuser une fausse information favorable \xE0 l\u2019entreprise
+    n\u2019est peut-\xEAtre pas une si mauvaise id\xE9e pour am\xE9liorer sa r\xE9putation
+    et gagner en popularit\xE9."
+  strongUpProbability: 20
   upProbability: 20
-  stableProbability: 40
+  stableProbability: 20
   downProbability: 20
-  strongDownProbability: 10
+  strongDownProbability: 20

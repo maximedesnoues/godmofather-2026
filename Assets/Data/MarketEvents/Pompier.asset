@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaed558efda80ef4786576bd2900636f, type: 3}
+  m_Name: Pompier
+  m_EditorClassIdentifier: Assembly-CSharp::MarketEventData
+  eventTitle: Pompier
+  eventDescription: "ALERTE INCENDIE !!!\nUn immense feu de for\xEAt a \xE9t\xE9
+    aper\xE7u \xE0 proximit\xE9 de votre entreprise.\nSoutenez les pompiers en contribuant
+    au financement de leur mat\xE9riel et de leurs interventions. Un geste qui renforcera
+    peut \xEAtre l\u2019image de votre entreprise aupr\xE8s du public."
+  strongUpProbability: 20
+  upProbability: 40
+  stableProbability: 0
+  downProbability: 30
+  strongDownProbability: 10

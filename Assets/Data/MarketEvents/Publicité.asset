@@ -16,7 +16,7 @@ MonoBehaviour:
   eventDescription: "Notre derni\xE8re campagne publicitaire a rencontr\xE9 un franc
     succ\xE8s ! L\u2019entreprise a gagn\xE9 en visibilit\xE9 et sa r\xE9putation
     aupr\xE8s du public s\u2019est consid\xE9rablement am\xE9lior\xE9e."
-  hintText: "80% r\xE9ussite\n20% super r\xE9ussite"
+  hintText: 
   strongUpProbability: 20
   upProbability: 80
   stableProbability: 0

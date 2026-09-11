@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 59d8e245c5eaa7f498b63e916b33b97f
+guid: ee7e2eae115992240a2072f60a80a0ee
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1695383269891212723
-    second: Icone-News_0
+      213: -7103350819259218892
+    second: Icone-News 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,12 +126,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icone-News_0
+      name: Icone-News 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 33
         height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4a7ef706e9c878e0800000000000000
-      internalID: -1695383269891212723
+      spriteID: 4340317a014db6d90800000000000000
+      internalID: -7103350819259218892
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icone-News_0: -1695383269891212723
+      Icone-News 1_0: -7103350819259218892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

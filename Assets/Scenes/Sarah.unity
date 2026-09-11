@@ -10836,8 +10836,13 @@ MonoBehaviour:
   eventUI: {fileID: 0}
   availableEvents:
   - {fileID: 11400000, guid: f0fbae27a5d49934ebd3ac32ba5e9e4d, type: 2}
-  - {fileID: 11400000, guid: c945d740f44963749ad295da35962e60, type: 2}
+  - {fileID: 11400000, guid: 0e86087246b80aa4b8b33ce6a93626e4, type: 2}
+  - {fileID: 11400000, guid: a432cb623f498c1498d9a416fc48b9e1, type: 2}
+  - {fileID: 11400000, guid: e59b26d817a359c40b188ac6598c2464, type: 2}
+  - {fileID: 11400000, guid: f5d428417327d9d4eb06cb0ebd99da76, type: 2}
+  - {fileID: 11400000, guid: d5a130fd7a443514baf920d49740ae16, type: 2}
   - {fileID: 11400000, guid: ca28f0f0941dd1b4b9b7cf501fd31bd6, type: 2}
+  - {fileID: 11400000, guid: c945d740f44963749ad295da35962e60, type: 2}
   hintChance: 0.5
   wrongHintChance: 0.1
 --- !u!114 &1881049351
@@ -12174,7 +12179,15 @@ MonoBehaviour:
   _buyableData: {fileID: 11400000, guid: 8f3574715ee74ef4f9c5ea6b090c1a3c, type: 2}
   _moneySlider: {fileID: 192121128}
   mosquitoPopup: {fileID: 2102926574}
-  _marketEvents: []
+  _marketEvents:
+  - {fileID: 11400000, guid: f0fbae27a5d49934ebd3ac32ba5e9e4d, type: 2}
+  - {fileID: 11400000, guid: 0e86087246b80aa4b8b33ce6a93626e4, type: 2}
+  - {fileID: 11400000, guid: a432cb623f498c1498d9a416fc48b9e1, type: 2}
+  - {fileID: 11400000, guid: e59b26d817a359c40b188ac6598c2464, type: 2}
+  - {fileID: 11400000, guid: f5d428417327d9d4eb06cb0ebd99da76, type: 2}
+  - {fileID: 11400000, guid: d5a130fd7a443514baf920d49740ae16, type: 2}
+  - {fileID: 11400000, guid: ca28f0f0941dd1b4b9b7cf501fd31bd6, type: 2}
+  - {fileID: 11400000, guid: c945d740f44963749ad295da35962e60, type: 2}
   sellHalo: {fileID: 616591087}
   gameData:
     currentMoney: 1000

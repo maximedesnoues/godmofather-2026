@@ -12531,7 +12531,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c945d740f44963749ad295da35962e60, type: 2}
   sellHalo: {fileID: 616591087}
   gameData:
-    currentMoney: 1000
+    currentMoney: 10
     moneyQuota: 300000
     soldUICount: 0
     karma: 0
@@ -12539,7 +12539,7 @@ MonoBehaviour:
     nextMailDay: 1
     wasMailOpened: 0
     currentDay: 1
-    totalDays: 10
+    totalDays: 20
     currentMarketValue: 100
     playerPrediction: 2
     currentBet: 0
@@ -12558,7 +12558,6 @@ MonoBehaviour:
   itemToSell: {fileID: 0}
   calendarZone: {fileID: 891423746}
   calendarImages:
-  - {fileID: 21300000, guid: eca00bce5affad84e954c8088f95be71, type: 3}
   - {fileID: 21300000, guid: 60bc64287f305a34fb78bb455ac6daf2, type: 3}
   - {fileID: 21300000, guid: 2870596f63d21dd4da13cce6dfb9b3b4, type: 3}
   - {fileID: 21300000, guid: db81d519bbfc00e4983eeab15956745e, type: 3}

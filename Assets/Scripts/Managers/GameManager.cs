@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Slider _moneySlider;
 
+    [SerializeField] private MosquitoPopup mosquitoPopup;
+
     [Header("Market Events")]
     [SerializeField] private List<MarketEventData> _marketEvents;
     [SerializeField] private GameObject sellHalo;
@@ -28,10 +30,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Mail")]
     [SerializeField] private GameObject mailNotificationIcon;
-    [SerializeField] private Texture2D mailNotificationIconBase;
-    [SerializeField] private Texture2D mailNotificationIconMom;
-    [SerializeField] private Texture2D mailNotificationIconBoss;
-    [SerializeField] private Texture2D mailNotificationIconStory;
+    [SerializeField] private Sprite mailNotificationIconBase;
+    [SerializeField] private Sprite mailNotificationIconMom;
+    [SerializeField] private Sprite mailNotificationIconBoss;
+    [SerializeField] private Sprite mailNotificationIconStory;
     [SerializeField] private GameObject mailZone;
     [SerializeField] private GameObject mailTitle;
     [SerializeField] private GameObject mailText;
@@ -45,6 +47,14 @@ public class GameManager : MonoBehaviour
     [Header("Calendar")]
     [SerializeField] private GameObject calendarZone;
     [SerializeField] private List<Sprite> calendarImages;
+
+    [Header("Sons")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip vente;
+    [SerializeField] private AudioClip notif;
+    [SerializeField] private AudioClip goodProno;
+    [SerializeField] private AudioClip badProno;
+    [SerializeField] private AudioClip newDay;
 
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
@@ -126,6 +136,7 @@ public class GameManager : MonoBehaviour
                         AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                         Destroy(_currentSellableObject);
                         Data.soldUICount++;
+                        audioSource.PlayOneShot(vente);
                     }
                 }
             }
@@ -145,6 +156,7 @@ public class GameManager : MonoBehaviour
             Data.soldUICount++;
             itemToSell = null;
         }
+        audioSource.PlayOneShot(vente);
         ToggleSellingMode();
         confirmationPopUp.SetActive(false);
     }
@@ -181,14 +193,21 @@ public class GameManager : MonoBehaviour
         gameData.wasMailOpened = false;
         gameData.currentDay++;
 
+        if (gameData.currentDay == 12 && mosquitoPopup != null)
+        {
+            mosquitoPopup.OpenPopup();
+        }
+
         if (gameData.currentDay == gameData.nextMailDay)
         {
+            audioSource.PlayOneShot(notif);
+            Debug.Log("Mail received: " + gameData.nextMail.mailType);
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconMom;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconMom;
             else if (gameData.nextMail.mailType == MailData.MailType.Boss)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconBoss;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBoss;
             else if (gameData.nextMail.mailType == MailData.MailType.Story)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconStory;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconStory;
         }
         bool soldUIEffectActive = gameData.soldUICount > 0;
 
@@ -271,8 +290,8 @@ public class GameManager : MonoBehaviour
         {
             oneButton.SetActive(false);
             twoButton.SetActive(true);
-            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gameData.nextMail.leftButtonText;
-            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[2].text = gameData.nextMail.rightButtonText;
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gameData.nextMail.leftButtonText;
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gameData.nextMail.rightButtonText;
         }
         else
         {
@@ -285,12 +304,14 @@ public class GameManager : MonoBehaviour
     public void CloseMailGood()
     {
         mailZone.SetActive(false);
+        mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;
     }

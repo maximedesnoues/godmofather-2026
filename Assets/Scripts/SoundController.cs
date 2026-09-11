@@ -12,8 +12,8 @@ public class SoundController : MonoBehaviour
     }
     public void UpdateVolume()
     {
-        AudioListener.volume = _soundSlider.value;
-        _soundText.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(_soundSlider.value * 100) + "%";
+        AudioListener.volume = 1 - _soundSlider.value;
+        _soundText.GetComponent<TextMeshProUGUI>().text = 100 - Mathf.RoundToInt(_soundSlider.value * 100) + "%";
     }
     private void OnDestroy()
     {

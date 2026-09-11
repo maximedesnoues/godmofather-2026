@@ -188,9 +188,6 @@ public class GameManager : MonoBehaviour
             mosquitoPopup.OpenPopup();
         }
 
-        if (gameData.currentDay > gameData.totalDays)
-        Debug.Log("Day: " + gameData.currentDay);
-        Debug.Log("Mail day : " + gameData.nextMailDay);
         if (gameData.currentDay == gameData.nextMailDay)
         {
             Debug.Log("Mail received: " + gameData.nextMail.mailType);

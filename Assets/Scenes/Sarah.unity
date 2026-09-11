@@ -418,7 +418,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1350,7 +1350,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 50
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3651,7 +3651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 264262c198e74f04087be50b913e4a1a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12ff87213250f3846a210cf0d5dfa6bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -8946,7 +8946,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -11400,10 +11400,10 @@ MonoBehaviour:
     currentBet: 0
     hasPrediction: 0
   mailNotificationIcon: {fileID: 743009350}
-  mailNotificationIconBase: {fileID: 2800000, guid: 264262c198e74f04087be50b913e4a1a, type: 3}
-  mailNotificationIconMom: {fileID: 2800000, guid: 12ff87213250f3846a210cf0d5dfa6bf, type: 3}
-  mailNotificationIconBoss: {fileID: 2800000, guid: 1b5438e9edaa1684f98d9fd64219229b, type: 3}
-  mailNotificationIconStory: {fileID: 2800000, guid: a4d9ad756d8cee64fa045211b7431002, type: 3}
+  mailNotificationIconBase: {fileID: 21300000, guid: 264262c198e74f04087be50b913e4a1a, type: 3}
+  mailNotificationIconMom: {fileID: 21300000, guid: 12ff87213250f3846a210cf0d5dfa6bf, type: 3}
+  mailNotificationIconBoss: {fileID: 21300000, guid: 1b5438e9edaa1684f98d9fd64219229b, type: 3}
+  mailNotificationIconStory: {fileID: 21300000, guid: a4d9ad756d8cee64fa045211b7431002, type: 3}
   mailZone: {fileID: 571131477}
   mailTitle: {fileID: 1118382317}
   mailText: {fileID: 2046363659}

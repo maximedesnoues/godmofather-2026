@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour
 
     [Header("Mail")]
     [SerializeField] private GameObject mailNotificationIcon;
-    [SerializeField] private Texture2D mailNotificationIconBase;
-    [SerializeField] private Texture2D mailNotificationIconMom;
-    [SerializeField] private Texture2D mailNotificationIconBoss;
-    [SerializeField] private Texture2D mailNotificationIconStory;
+    [SerializeField] private Sprite mailNotificationIconBase;
+    [SerializeField] private Sprite mailNotificationIconMom;
+    [SerializeField] private Sprite mailNotificationIconBoss;
+    [SerializeField] private Sprite mailNotificationIconStory;
     [SerializeField] private GameObject mailZone;
     [SerializeField] private GameObject mailTitle;
     [SerializeField] private GameObject mailText;
@@ -180,15 +180,17 @@ public class GameManager : MonoBehaviour
 
         gameData.wasMailOpened = false;
         gameData.currentDay++;
-
+        Debug.Log("Day: " + gameData.currentDay);
+        Debug.Log("Mail day : " + gameData.nextMailDay);
         if (gameData.currentDay == gameData.nextMailDay)
         {
+            Debug.Log("Mail received: " + gameData.nextMail.mailType);
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconMom;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconMom;
             else if (gameData.nextMail.mailType == MailData.MailType.Boss)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconBoss;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBoss;
             else if (gameData.nextMail.mailType == MailData.MailType.Story)
-                mailNotificationIcon.GetComponent<RawImage>().texture = mailNotificationIconStory;
+                mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconStory;
         }
         bool soldUIEffectActive = gameData.soldUICount > 0;
 
@@ -271,8 +273,8 @@ public class GameManager : MonoBehaviour
         {
             oneButton.SetActive(false);
             twoButton.SetActive(true);
-            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gameData.nextMail.leftButtonText;
-            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[2].text = gameData.nextMail.rightButtonText;
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[0].text = gameData.nextMail.leftButtonText;
+            twoButton.GetComponentsInChildren<TextMeshProUGUI>()[1].text = gameData.nextMail.rightButtonText;
         }
         else
         {
@@ -285,12 +287,14 @@ public class GameManager : MonoBehaviour
     public void CloseMailGood()
     {
         mailZone.SetActive(false);
+        mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;
     }

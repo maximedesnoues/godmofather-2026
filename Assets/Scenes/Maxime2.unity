@@ -10220,7 +10220,7 @@ MonoBehaviour:
     currentMoney: 1000
     moneyQuota: 300000
     soldUICount: 0
-    currentDay: 10
+    currentDay: 1
     totalDays: 20
     currentMarketValue: 100
     playerPrediction: 2

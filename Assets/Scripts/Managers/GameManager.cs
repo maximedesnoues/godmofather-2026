@@ -108,32 +108,27 @@ public class GameManager : MonoBehaviour
         {
             if (IsPointerOverUIElement(GetEventSystemRaycastResults()))
             {
-                Debug.Log("It's over UI elements");
                 Cursor.SetCursor(_sellCursorTexture, Vector2.zero, CursorMode.Auto);
 
                 if (Mouse.current.leftButton.wasPressedThisFrame)
                 { 
                     if( (_buyableData.data.Find(x => x.name == _currentSellableObject.name).needConfirmation))
                         {
-                        Debug.Log("Need confirmation for: " + _currentSellableObject.name);
                         confirmationPopUp.SetActive(true);
                         itemToSell = _currentSellableObject;
                         ToggleSellingMode();
                     }
                     else
                     {
-                        Debug.Log("No confirmation needed for: " + _currentSellableObject.name);
                         _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
                         AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
                         Destroy(_currentSellableObject);
                         Data.soldUICount++;
-                        Debug.Log("Clicked on: " + _currentSellableObject.name);
                     }
                 }
             }
             else
             {
-                Debug.Log("It's NOT over UI elements");
                 Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
             }
         }
@@ -146,7 +141,6 @@ public class GameManager : MonoBehaviour
             AddMoney(_buyableData.data.Find(x => x.name == itemToSell.name).value);
             Destroy(itemToSell);
             Data.soldUICount++;
-            Debug.Log("Confirmed sell for: " + itemToSell.name);
             itemToSell = null;
         }
         ToggleSellingMode();
@@ -180,10 +174,11 @@ public class GameManager : MonoBehaviour
     {
         if (IsGameOver) return;
 
+        calendarZone.GetComponent<Image>().sprite = calendarImages[gameData.currentDay - 1];
+
         gameData.wasMailOpened = false;
         gameData.currentDay++;
 
-        calendarZone.GetComponent<Image>().sprite = calendarImages[gameData.currentDay - 1];
         if (gameData.currentDay == gameData.nextMailDay)
         {
             if (gameData.nextMail.mailType == MailData.MailType.Mom)
@@ -260,7 +255,10 @@ public class GameManager : MonoBehaviour
 
     public void OpenMail()
     {
-        if (gameData.currentDay != gameData.nextMailDay || gameData.wasMailOpened) return;
+        if (gameData.currentDay != gameData.nextMailDay || gameData.wasMailOpened)
+        {
+            return;
+        }
 
         gameData.wasMailOpened = true;
 
@@ -278,22 +276,21 @@ public class GameManager : MonoBehaviour
         {
             oneButton.SetActive(true);
             twoButton.SetActive(false);
-            oneButton.GetComponent<TextMeshProUGUI>().text = gameData.nextMail.leftButtonText;
+            oneButton.GetComponentInChildren<TextMeshProUGUI>().text = gameData.nextMail.leftButtonText;
         }
-        gameData.nextMailDay = gameData.nextMail.nextMailDay;
     }
 
     public void CloseMailGood()
     {
         mailZone.SetActive(false);
+        gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
-        Debug.Log("Good");
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;
-        Debug.Log("Bad");
     }
 
 

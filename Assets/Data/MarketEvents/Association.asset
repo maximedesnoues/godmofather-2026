@@ -16,6 +16,7 @@ MonoBehaviour:
   eventDescription: "La faim frappe de nouveau les pays d\xE9munis. Nous recherchons
     donc des parrains pour financer nos diff\xE9rentes\u2026 op\xE9rations sur place.\nVotre
     soutien, ainsi que votre discr\xE9tion, seront grandement appr\xE9ci\xE9s."
+  hintText: Faire confiance en cette association ?
   strongUpProbability: 20
   upProbability: 20
   stableProbability: 0

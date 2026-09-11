@@ -17,6 +17,7 @@ MonoBehaviour:
     afin de faire d\xE9couvrir votre entreprise \xE0 ma communaut\xE9 gr\xE2ce \xE0
     un placement de produit. Cette collaboration pourrait vous permettre d\u2019am\xE9liorer
     votre visibilit\xE9 et votre r\xE9putation aupr\xE8s du public."
+  hintText: "Pensez-vous que ce serait une bonne id\xE9e ?"
   strongUpProbability: 30
   upProbability: 20
   stableProbability: 0

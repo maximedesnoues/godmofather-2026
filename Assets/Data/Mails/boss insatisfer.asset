@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: boss insatisfer
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
-  title: Vous verez !
+  title: Vous verrez !
   content: "Votre honn\xEAtet\xE9 ne vous servira pas \xE0 grand-chose, vous finirez
     par m'ob\xE9ir t\xF4t ou tard. Continuez \xE0 r\xE9sister, et voyez combien de
-    temps vous gardez votre poste."
-  leftButtonText: "Je ne compte pas caser d'oeufs mais je r\xE9ussirais"
+    temps vous garderez votre poste."
+  leftButtonText: "Je ne compte pas casser d'oeufs mais je r\xE9ussirai."
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: Oui monsieur !

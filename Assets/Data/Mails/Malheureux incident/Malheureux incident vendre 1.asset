@@ -18,8 +18,8 @@ MonoBehaviour:
     sa femme, il n'est pas rentr\xE9 du travail et sa femme m'a appris qu'il travaillait
     dans la m\xEAme entreprise que toi. Dis-moi si tu as des informations car la
     police le cherche, j'esp\xE8re que tu n'as rien \xE0 voir avec \xE7a sinon je
-    ne sais pas ce que je ferai. Bisous  Maman"
-  leftButtonText: Je ne sais pas se qu'il est devenu.
+    ne sais pas ce que je ferai. Bisous, Maman"
+  leftButtonText: Je ne sais pas ce qu'il est devenu.
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: "Le d\xE9noncer !"

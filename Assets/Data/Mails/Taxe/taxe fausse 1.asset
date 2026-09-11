@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: taxe fausse 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
-  title: Tout vas bien ?
-  content: "coucou, je regardais la t\xE9l\xE9 se matin et j'ai vue une affaire de
-    d\xE9tournement de fond et j'ai cru entendre le nom de ton entreprise. Je pense
-    que j'ai due mal entendre mais tien moi au courant.  Bisous"
-  leftButtonText: Je ne voie pas de quoi tu parle.
+  title: Tout va bien ?
+  content: "Coucou, je regardais la t\xE9l\xE9 ce matin et j'ai vu une affaire de
+    d\xE9tournement de fonds et j'ai cru entendre le nom de ton entreprise. Je pense
+    que j'ai d\xFB mal entendre mais tiens moi au courant.  Bisous"
+  leftButtonText: Je ne vois pas de quoi tu parles.
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: fausse signature

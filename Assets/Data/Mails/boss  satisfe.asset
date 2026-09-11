@@ -17,7 +17,7 @@ MonoBehaviour:
   content: "Voil\xE0 une r\xE9ponse qui me pla\xEEt. Ce qui se passe ici reste ici,
     tant que \xE7a reste rentable. Retenez bien cette r\xE8gle, elle vaudra pour
     tout le reste"
-  leftButtonText: "Je ne compte pas caser d'oeufs mais je r\xE9ussirais"
+  leftButtonText: "Je ne compte pas casser d'oeufs mais je r\xE9ussirai"
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: Oui monsieur !

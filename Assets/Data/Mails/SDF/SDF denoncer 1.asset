@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
   title: Disparition
-  content: "coucou, j'\xE9tais \xE0 mon association pour les sans-abri aujourd'hui
+  content: "Coucou, j'\xE9tais \xE0 mon association pour les sans-abri aujourd'hui
     et Georges n'y \xE9tait pas. C'est un de nos sans-abri les plus habitu\xE9s et
     il \xE9tait parti acheter de la nourriture pour les autres. J'esp\xE8re qu'il
-    ne lui est rien arriv\xE9. Bisous  Maman"
-  leftButtonText: Je ne sais pas se qu'il est devenu.
+    ne lui est rien arriv\xE9. Bisous, Maman"
+  leftButtonText: Je ne sais pas ce qu'il est devenu.
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: "Le d\xE9noncer !"

@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
   title: Bravo !
-  content: "Bonjour, J'ai appris l'arrestation ce matin, et je dois dire que je suis
-    fier de votre r\xE9action. Vous avez fait ce qu'il fallait : prot\xE9ger les
-    int\xE9r\xEAts de l'entreprise avant tout le reste. Continuez comme \xE7a. Cordialement."
-  leftButtonText: "Vous pouvez compter sur moi pour prot\xE9ger les int\xE9res de
-    l'entreprise"
+  content: "Bonjour, j'ai appris l'arrestation du SDF ce matin, et je dois dire que
+    je suis fier de votre r\xE9action. Vous avez fait ce qu'il fallait : prot\xE9ger
+    les int\xE9r\xEAts de l'entreprise avant tout le reste. Continuez comme \xE7a.
+    Cordialement."
+  leftButtonText: "Vous pouvez compter sur moi pour prot\xE9ger les int\xE9r\xEAts
+    de l'entreprise."
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: "Le d\xE9noncer !"

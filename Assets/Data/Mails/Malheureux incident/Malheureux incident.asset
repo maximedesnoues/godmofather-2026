@@ -20,7 +20,7 @@ MonoBehaviour:
   leftButtonText: "Le rendre \xE0 sa famille"
   leftButtonMoney: 0
   leftButtonKarma: 0
-  rightButtonText: "Vendre le corp pour cach\xE9 l'affaire"
+  rightButtonText: Vendre le corps pour cacher l'affaire
   rightButtonMoney: 2000
   rightButtonKarma: 2
   nextMailGood: {fileID: 11400000, guid: 126c0f9652df04f4c84e7c950ef15a48, type: 2}

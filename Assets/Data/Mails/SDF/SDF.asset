@@ -15,7 +15,7 @@ MonoBehaviour:
   mailType: 2
   title: SDF
   content: "\xAB Vous surprenez un SDF en train de voler de la nourriture dans les
-    r\xE9serves de votre entreprise car il meurt de faim . Que d\xE9cidez vous de
+    r\xE9serves de votre entreprise car il meurt de faim. Que d\xE9cidez vous de
     faire ? \xBB"
   leftButtonText: Fermer les yeux dessus.
   leftButtonMoney: 0

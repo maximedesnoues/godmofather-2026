@@ -16,10 +16,10 @@ MonoBehaviour:
   title: Concurence
   content: "La p\xE9riode de paiement des imp\xF4ts est arriv\xE9e. Vous devez maintenant
     choisir comment g\xE9rer les imp\xF4ts de l\u2019entreprise."
-  leftButtonText: Payer les impo
+  leftButtonText: "Payer les imp\xF4ts"
   leftButtonMoney: 0
   leftButtonKarma: -2
-  rightButtonText: fausse signature
+  rightButtonText: Fausse signature
   rightButtonMoney: 0
   rightButtonKarma: 0
   nextMailGood: {fileID: 11400000, guid: 54009d985032ea94b81054cc5258676a, type: 2}

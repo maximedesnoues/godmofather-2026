@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: choix direction
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 2
-  title: Appelle du boss
-  content: "Bonjour, La r\xE9ussite de l\u2019entreprise exige parfois de faire Des
+  title: Appel du boss
+  content: "Bonjour, la r\xE9ussite de l\u2019entreprise exige parfois de faire des
     sacrifices n\xE9cessaires. Vous devrez atteindre les objectifs fix\xE9s et remplir
     votre quota avant la fin de la p\xE9riode.  Je compte sur vous !!! Ne me d\xE9cevez
     pas."
-  leftButtonText: Ok....
+  leftButtonText: Ok...
   leftButtonMoney: 0
   leftButtonKarma: 0
-  rightButtonText: "Oui ,biens\xFBr monsieur !"
+  rightButtonText: "Oui, bien s\xFBr monsieur !"
   rightButtonMoney: 0
   rightButtonKarma: 0
   nextMailGood: {fileID: 11400000, guid: c6f35af9c4300274ab5f71f25caed1c1, type: 2}

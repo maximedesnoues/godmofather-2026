@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Market Events")]
     [SerializeField] private List<MarketEventData> _marketEvents;
+    [SerializeField] private GameObject sellHalo;
 
     [Header("Game Data")]
     [SerializeField] private GameData gameData = new GameData();
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
     public void ToggleSellingMode()
     {
         _isSellingMode = !_isSellingMode;
+        sellHalo.SetActive(_isSellingMode);
         foreach (var canvasGroup in _sellingModeCanvasGroup)
         {
             canvasGroup.interactable = !_isSellingMode;

@@ -18,12 +18,12 @@ MonoBehaviour:
     sacrifices n\xE9cessaires. Vous devrez atteindre les objectifs fix\xE9s et remplir
     votre quota avant la fin de la p\xE9riode.  Je compte sur vous !!! Ne me d\xE9cevez
     pas."
-  leftButtonText: "Oui , bien s\xFBre monsieur !"
+  leftButtonText: "Je ne compte pas caser d'oeufs mais je r\xE9ussirais"
   leftButtonMoney: 0
   leftButtonKarma: 0
-  rightButtonText: "Je ne compte pas caser d'oeufs mais je r\xE9ussirais"
+  rightButtonText: "Oui ,biens\xFBr monsieur !"
   rightButtonMoney: 0
   rightButtonKarma: 0
-  nextMailGood: {fileID: 11400000, guid: 57473df5e1e706246ad6b30697c3fce0, type: 2}
-  nextMailBad: {fileID: 0}
+  nextMailGood: {fileID: 11400000, guid: c6f35af9c4300274ab5f71f25caed1c1, type: 2}
+  nextMailBad: {fileID: 11400000, guid: 57473df5e1e706246ad6b30697c3fce0, type: 2}
   nextMailDay: 3

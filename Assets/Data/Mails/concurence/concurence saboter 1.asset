@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c50a8a2f81707c4f8db29ac8092433e, type: 3}
+  m_Name: concurence saboter 1
+  m_EditorClassIdentifier: Assembly-CSharp::MailData
+  mailType: 0
+  title: 
+  content: 
+  leftButtonText: 
+  leftButtonMoney: 0
+  leftButtonKarma: 0
+  rightButtonText: fausse signature
+  rightButtonMoney: 0
+  rightButtonKarma: 1
+  nextMailGood: {fileID: 11400000, guid: 30ba7404129c8b8439ee743928c0613a, type: 2}
+  nextMailBad: {fileID: 11400000, guid: 2b3ceb05b05eff344af1b71799881a4a, type: 2}
+  nextMailDay: 11

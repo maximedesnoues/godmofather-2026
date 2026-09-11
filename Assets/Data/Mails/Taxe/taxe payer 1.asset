@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: taxe payer 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
-  title: "De l'argents jeter par la fen\xEAtre"
+  title: "De l'argent jet\xE9 par la fen\xEAtre"
   content: "Vous avez donn\xE9 notre argent \xE0 l'\xC9tat sans m\xEAme r\xE9fl\xE9chir.
     J'esp\xE8re que votre honn\xEAtet\xE9 vous fait vous sentir mieux, parce qu'elle
     ne nous rapporte rien. N'oubliez pas que j'ai TOUS les droits sur vous. R\xE9fl\xE9chissez

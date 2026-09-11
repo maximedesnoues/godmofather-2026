@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: SDF ignore 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
-  title: Que faite vous !?
-  content: "Bonjour,  J'apprends que vous avez laiss\xE9 filer un vol de 4\u20AC
-    sans rien signaler. Cette somme sera directement retenue sur votre prochaine
-    paie, votre n\xE9gligence a un prix. La prochaine fois, r\xE9fl\xE9chissez \xE0
-    qui vous \xEAtes r\xE9ellement loyal.  Cordialement,"
+  title: Que faites vous !?
+  content: "Bonjour, j'apprends que vous avez laiss\xE9 filer un vol de 4\u20AC sans
+    rien signaler. Cette somme sera directement retenue sur votre prochaine paie,
+    votre n\xE9gligence a un prix. La prochaine fois, r\xE9fl\xE9chissez \xE0 qui
+    vous \xEAtes r\xE9ellement loyal. Cordialement,"
   leftButtonText: "Je ne vous d\xE9cevrai plus."
   leftButtonMoney: 0
   leftButtonKarma: 0

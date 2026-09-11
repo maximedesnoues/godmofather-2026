@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: concurence ameliorer2
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
-  title: "Que de la qualit\xE9e."
-  content: "Coucou , Je vein de tester les nouveaux produits Coucou , je vien tester
-    les nouveaux produit de ton entreprise .J'adore la nouvelle qualit\xE9. \xE0
-    part \xE7a j'esp\xE8re que tu rentreras le week-end prochain, tu commence \xE0
-    me manquer. bisous. Maman"
-  leftButtonText: merci du compliment.
+  title: "Que de la qualit\xE9."
+  content: "Coucou, je viens de tester les nouveaux produits de ton entreprise. J'adore
+    la nouvelle qualit\xE9. A part \xE7a j'esp\xE8re que tu rentreras le week-end
+    prochain, tu commence \xE0 me manquer. Bisous ! Maman"
+  leftButtonText: Merci du compliment.
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: "Le d\xE9noncer !"

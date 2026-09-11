@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: taxe fausse 2
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
-  title: Impo
+  title: "Imp\xF4ts"
   content: "La p\xE9riode de paiement des imp\xF4ts est arriv\xE9e. Vous devez maintenant
     choisir comment g\xE9rer les imp\xF4ts de l\u2019entreprise."
-  leftButtonText: Payer les impo
+  leftButtonText: "Payer les imp\xF4ts"
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: fausse signature

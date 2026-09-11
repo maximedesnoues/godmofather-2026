@@ -18,6 +18,7 @@ public class EventUI : MonoBehaviour
     private MarketEventData currentEvent;
     private bool hasHint;
     private CurveMovement hintMovement;
+    private string currentHintText;
 
     private void Start()
     {
@@ -46,16 +47,17 @@ public class EventUI : MonoBehaviour
 
     private void RefreshHint()
     {
-        if (hintText == null) return;
+        if (hintText == null || currentEvent == null) return;
+
+        hintText.gameObject.SetActive(true);
 
         if (!hasHint)
         {
-            hintText.gameObject.SetActive(false);
+            hintText.text = "";
             return;
         }
 
-        hintText.gameObject.SetActive(true);
-        hintText.text = $"Analyse du marché : tendance estimée {MarketManager.MovementToString(hintMovement)}";
+        hintText.text = currentEvent.hintText;
     }
 
     public void OpenEventWindow()
@@ -82,12 +84,8 @@ public class EventUI : MonoBehaviour
             return;
 
         if (applicationPanel.activeSelf)
-        {
             CloseEventWindow();
-        }
         else
-        {
             OpenEventWindow();
-        }
     }
 }

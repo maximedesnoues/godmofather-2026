@@ -17,6 +17,7 @@ MonoBehaviour:
     et de renforcer la motivation des salari\xE9s, nous vous recommandons d\u2019accorder
     une augmentation g\xE9n\xE9rale des salaires.\nCette mesure permettra d\u2019am\xE9liorer
     le moral des employ\xE9s et leur implication dans leur travail."
+  hintText: "Le salari\xE9s seront-ils satisfait ?"
   strongUpProbability: 15
   upProbability: 35
   stableProbability: 20

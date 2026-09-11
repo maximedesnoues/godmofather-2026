@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: concurence saboter 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
-  title: Quel horreur !
-  content: "C'est horible ! l'une de vos entreprise voisine \xE0 exploser hier. la
-    police dis que personne ne sait se qu'il c'est passer. Bon je sais que c'\xE9tait
-    l'un de vos concurent mais il ne m\xE9rit\xE9 pas \xE7a. j'esp\xE8re que \xE7a
-    n'auras pas trop de cons\xE9quence sur votre marcher."
-  leftButtonText: "Ne t'inqui\xE8te pas , nous n'y somme pour rien et \xE7a devrais
+  title: Quelle horreur !
+  content: "C'est horrible ! L'une de vos entreprises voisine a explos\xE9 hier.
+    La police dit que personne ne sait ce qu'il s'est pass\xE9. Bon, je sais que
+    c'\xE9tait l'un de vos concurent mais il ne m\xE9ritait pas \xE7a. J'esp\xE8re
+    que \xE7a n'aura pas trop de cons\xE9quences sur votre march\xE9."
+  leftButtonText: "Ne t'inqui\xE8tes pas, nous n'y sommes pour rien et \xE7a devrait
     aller pour nous."
   leftButtonMoney: 0
   leftButtonKarma: 0

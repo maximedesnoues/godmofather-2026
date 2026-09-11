@@ -15,12 +15,12 @@ MonoBehaviour:
   mailType: 0
   title: Bravo pour ton nouveau travail de directeur
   content: "Coucou mon poussin \U0001F424. J'\xE9tais tr\xE8s contente que tu sois
-    venue me voir ce week-end car je sais que tu es tr\xE8s occup\xE9e avec ton travail.
+    venue me voir ce week-end car je sais que tu es tr\xE8s occup\xE9 avec ton travail.
     N'oublie pas ton plat pr\xE9f\xE9r\xE9 que je t'ai pr\xE9par\xE9 qui se trouve
     dans le frigo. J'esp\xE8re te revoir rapidement. Ton chat Max se porte tr\xE8s
-    bien, cette boule de poile est trop mignonne je l'aime beaucoup.  Bisous \U0001F61A. 
-    Maman."
-  leftButtonText: "j'ai h\xE2te de revoir Max et toi ."
+    bien, cette boule de poils est trop mignonne, je l'aime beaucoup.  Bisous \U0001F61A. 
+    Maman"
+  leftButtonText: "J'ai h\xE2te de revoir Max et toi."
   leftButtonMoney: 10
   leftButtonKarma: -1
   rightButtonText: dqsdqsdcxww

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: concurence ameliorer 1
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 1
-  title: Encore du Gachis !
+  title: Encore du gachis !
   content: "Investir pour rattraper un concurrent, c'est d\xE9j\xE0 courir derri\xE8re
     lui. Pendant que vous peaufinez des d\xE9tails, ils prennent nos parts de march\xE9
-    et notre argent avec. On n'a pas le temps ni les moyens pour ce genre de lenteur."
-  leftButtonText: Je suis desoler monsieur.
+    et notre argent avec. On n'a pas le temps ni les moyens pour ce genre de ralentissements."
+  leftButtonText: "Je suis d\xE9sol\xE9 monsieur."
   leftButtonMoney: 0
   leftButtonKarma: 0
   rightButtonText: "Le d\xE9noncer !"

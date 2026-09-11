@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: taxe payer 2
   m_EditorClassIdentifier: Assembly-CSharp::MailData
   mailType: 0
-  title: bravo mon fils !
+  title: Bravo mon fils !
   content: "Coucou mon poussin, j'ai vue \xE0 la t\xE9l\xE9 que ton entreprise se
-    porte bien, tu est bien toujours le directeur ? M\xEAme si tu a un patron au
-    dessus de toi je sais que c'est gr\xE2ce \xE0 toi que tout se passe bien."
+    porte bien, tu es toujours le directeur ? M\xEAme si tu a un patron au dessus
+    de toi je sais que c'est gr\xE2ce \xE0 toi que tout se passe bien."
   leftButtonText: Merci maman.
   leftButtonMoney: 0
   leftButtonKarma: 0

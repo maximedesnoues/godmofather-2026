@@ -15,6 +15,7 @@ MonoBehaviour:
   eventTitle: "Belle journ\xE9e"
   eventDescription: "C\u2019est une magnifique journ\xE9e aujourd\u2019hui, le soleil
     brille et pas de probl\xE8me \xE0 l\u2019horizon."
+  hintText: 100% neutre
   strongUpProbability: 0
   upProbability: 0
   stableProbability: 100

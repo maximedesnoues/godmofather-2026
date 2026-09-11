@@ -16,6 +16,7 @@ MonoBehaviour:
   eventDescription: "Diffuser une fausse information favorable \xE0 l\u2019entreprise
     n\u2019est peut-\xEAtre pas une si mauvaise id\xE9e pour am\xE9liorer sa r\xE9putation
     et gagner en popularit\xE9."
+  hintText: "V\u2019a t\u2019elle faire le buzz ?"
   strongUpProbability: 20
   upProbability: 20
   stableProbability: 20

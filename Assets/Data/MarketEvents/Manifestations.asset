@@ -16,6 +16,7 @@ MonoBehaviour:
   eventDescription: " Une manifestation contre votre entreprise prend de l\u2019ampleur.
     Cette mobilisation risque de nuire \xE0 votre image et \xE0 votre r\xE9putation
     aupr\xE8s du public."
+  hintText: "80% \xE9chec\n20% super \xE9chec"
   strongUpProbability: 0
   upProbability: 0
   stableProbability: 0

@@ -9,6 +9,10 @@ public class MarketEventData : ScriptableObject
     [TextArea(3, 8)]
     public string eventDescription;
 
+    [Header("Hint")]
+    [TextArea(2, 5)]
+    public string hintText;
+
     [Header("Movement Probabilities")]
     [Range(0, 100)] public int strongUpProbability;
     [Range(0, 100)] public int upProbability;

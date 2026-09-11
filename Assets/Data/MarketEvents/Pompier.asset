@@ -17,6 +17,7 @@ MonoBehaviour:
     aper\xE7u \xE0 proximit\xE9 de votre entreprise.\nSoutenez les pompiers en contribuant
     au financement de leur mat\xE9riel et de leurs interventions. Un geste qui renforcera
     peut \xEAtre l\u2019image de votre entreprise aupr\xE8s du public."
+  hintText: Est-il utile de financer les pompiers ?
   strongUpProbability: 20
   upProbability: 40
   stableProbability: 0

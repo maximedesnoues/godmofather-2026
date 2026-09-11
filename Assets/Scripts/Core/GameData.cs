@@ -11,7 +11,7 @@ public class GameData
 
     [Header("Time")]
     [Min(1)] public int currentDay = 1;
-    [Min(1)] public int totalDays = 10;
+    [Min(1)] public int totalDays = 20;
 
     [Header("Market")]
     [Min(0f)] public float currentMarketValue = 100f;

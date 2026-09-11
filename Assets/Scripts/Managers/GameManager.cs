@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Slider _moneySlider;
 
+    [SerializeField] private MosquitoPopup mosquitoPopup;
+
     [Header("Market Events")]
     [SerializeField] private List<MarketEventData> _marketEvents;
 
@@ -134,6 +136,11 @@ public class GameManager : MonoBehaviour
         if (IsGameOver) return;
 
         gameData.currentDay++;
+
+        if (gameData.currentDay == 12 && mosquitoPopup != null)
+        {
+            mosquitoPopup.OpenPopup();
+        }
 
         if (gameData.currentDay > gameData.totalDays)
         {

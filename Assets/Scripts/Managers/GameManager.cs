@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         {
             _moneySlider.minValue = 0;
             _moneySlider.maxValue = gameData.moneyQuota;
-            _moneySlider.value = gameData.currentMoney;
+            _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
         }
 
         SaveOriginalEventProbabilities();
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
         if (_moneySlider == null) return;
 
         _moneySlider.maxValue = gameData.moneyQuota;
-        _moneySlider.value = gameData.currentMoney;
+        _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
     }
 
     public void NextDay()

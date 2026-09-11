@@ -306,12 +306,16 @@ public class GameManager : MonoBehaviour
     {
         mailZone.SetActive(false);
         mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
+        AddMoney(gameData.nextMail.leftButtonMoney);
+        gameData.karma += gameData.nextMail.leftButtonKarma;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        AddMoney(gameData.nextMail.rightButtonMoney);
+        gameData.karma += gameData.nextMail.rightButtonKarma;
         mailNotificationIcon.GetComponent<Image>().sprite = mailNotificationIconBase;
         gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;

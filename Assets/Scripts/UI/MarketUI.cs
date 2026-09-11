@@ -30,6 +30,16 @@ public class MarketUI : MonoBehaviour
         RefreshMoney();
     }
 
+    public void ApplyCurrentBetInput()
+    {
+        if (betInputField == null) return;
+
+        if (int.TryParse(betInputField.text, out int amount))
+            marketManager.SetBet(amount);
+        else
+            marketManager.SetBet(0);
+    }
+
     public void RefreshAll()
     {
         if (GameManager.Instance == null || marketManager == null) return;

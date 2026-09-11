@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Mail")]
     [SerializeField] private GameObject mailNotificationIcon;
+    [SerializeField] private Texture2D mailNotificationIconBase;
     [SerializeField] private Texture2D mailNotificationIconMom;
     [SerializeField] private Texture2D mailNotificationIconBoss;
     [SerializeField] private Texture2D mailNotificationIconStory;
@@ -39,6 +40,10 @@ public class GameManager : MonoBehaviour
     [Header("Confirmation Pop Up")]
     [SerializeField] private GameObject confirmationPopUp;
     [SerializeField] private GameObject itemToSell;
+
+    [Header("Calendar")]
+    [SerializeField] private GameObject calendarZone;
+    [SerializeField] private List<Sprite> calendarImages;
 
     public GameData Data => gameData;
     public bool IsGameOver { get; private set; }
@@ -82,7 +87,7 @@ public class GameManager : MonoBehaviour
         {
             _moneySlider.minValue = 0;
             _moneySlider.maxValue = gameData.moneyQuota;
-            _moneySlider.value = gameData.currentMoney;
+            _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
         }
 
         SaveOriginalEventProbabilities();
@@ -103,32 +108,27 @@ public class GameManager : MonoBehaviour
         {
             if (IsPointerOverUIElement(GetEventSystemRaycastResults()))
             {
-                Debug.Log("It's over UI elements");
                 Cursor.SetCursor(_sellCursorTexture, Vector2.zero, CursorMode.Auto);
 
                 if (Mouse.current.leftButton.wasPressedThisFrame)
                 { 
                     if( (_buyableData.data.Find(x => x.name == _currentSellableObject.name).needConfirmation))
                         {
-                        Debug.Log("Need confirmation for: " + _currentSellableObject.name);
                         confirmationPopUp.SetActive(true);
                         itemToSell = _currentSellableObject;
                         ToggleSellingMode();
                     }
                     else
                     {
-                        Debug.Log("No confirmation needed for: " + _currentSellableObject.name);
                         _buyableData.data.Find(x => x.name == _currentSellableObject.name).isBuyable = true;
                         AddMoney(_buyableData.data.Find(x => x.name == _currentSellableObject.name).value);
-                        _currentSellableObject.SetActive(false);
+                        Destroy(_currentSellableObject);
                         Data.soldUICount++;
-                        Debug.Log("Clicked on: " + _currentSellableObject.name);
                     }
                 }
             }
             else
             {
-                Debug.Log("It's NOT over UI elements");
                 Cursor.SetCursor(_CursorTexture, Vector2.zero, CursorMode.Auto);
             }
         }
@@ -139,9 +139,8 @@ public class GameManager : MonoBehaviour
         {
             _buyableData.data.Find(x => x.name == itemToSell.name).isBuyable = true;
             AddMoney(_buyableData.data.Find(x => x.name == itemToSell.name).value);
-            itemToSell.SetActive(false);
+            Destroy(itemToSell);
             Data.soldUICount++;
-            Debug.Log("Confirmed sell for: " + itemToSell.name);
             itemToSell = null;
         }
         ToggleSellingMode();
@@ -168,12 +167,14 @@ public class GameManager : MonoBehaviour
         if (_moneySlider == null) return;
 
         _moneySlider.maxValue = gameData.moneyQuota;
-        _moneySlider.value = gameData.currentMoney;
+        _moneySlider.value = gameData.moneyQuota - gameData.currentMoney;
     }
 
     public void NextDay()
     {
         if (IsGameOver) return;
+
+        calendarZone.GetComponent<Image>().sprite = calendarImages[gameData.currentDay - 1];
 
         gameData.wasMailOpened = false;
         gameData.currentDay++;
@@ -254,7 +255,10 @@ public class GameManager : MonoBehaviour
 
     public void OpenMail()
     {
-        if (gameData.currentDay != gameData.nextMailDay || gameData.wasMailOpened) return;
+        if (gameData.currentDay != gameData.nextMailDay || gameData.wasMailOpened)
+        {
+            return;
+        }
 
         gameData.wasMailOpened = true;
 
@@ -272,22 +276,21 @@ public class GameManager : MonoBehaviour
         {
             oneButton.SetActive(true);
             twoButton.SetActive(false);
-            oneButton.GetComponent<TextMeshProUGUI>().text = gameData.nextMail.leftButtonText;
+            oneButton.GetComponentInChildren<TextMeshProUGUI>().text = gameData.nextMail.leftButtonText;
         }
-        gameData.nextMailDay = gameData.nextMail.nextMailDay;
     }
 
     public void CloseMailGood()
     {
         mailZone.SetActive(false);
+        gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailGood;
-        Debug.Log("Good");
     }
     public void CloseMailBad()
     {
         mailZone.SetActive(false);
+        gameData.nextMailDay = gameData.nextMail.nextMailDay;
         gameData.nextMail = gameData.nextMail.nextMailBad;
-        Debug.Log("Bad");
     }
 
 

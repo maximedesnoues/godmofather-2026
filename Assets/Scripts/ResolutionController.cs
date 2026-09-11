@@ -16,7 +16,7 @@ public class ResolutionController : MonoBehaviour
         Debug.Log($"Resolution updated to: {_width}x{_height}");
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         (_width, _height) = _resolutions[Random.Range(0, _resolutions.Count)];
         Screen.SetResolution(_width, _height, Screen.fullScreen);

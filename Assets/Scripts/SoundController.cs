@@ -6,28 +6,19 @@ public class SoundController : MonoBehaviour
 {
     [SerializeField] private Slider _soundSlider;
     [SerializeField] private GameObject _soundText;
-    [SerializeField] AudioSource _audioSource;
     private void Start()
     {
-        _audioSource = GetComponent<AudioSource>();
-        _audioSource.volume = 1;
-    }
-
-    public void PlayAudioClip(AudioClip clip)
-    {
-        _audioSource.Stop();
-        _audioSource.clip = clip;
-        _audioSource.Play();
+        AudioListener.volume = 1;
     }
     public void UpdateVolume()
     {
-        _audioSource.volume = _soundSlider.value;
+        AudioListener.volume = _soundSlider.value;
         _soundText.GetComponent<TextMeshProUGUI>().text = Mathf.RoundToInt(_soundSlider.value * 100) + "%";
     }
-    private void OnDisable()
+    private void OnDestroy()
     {
-        Debug.Log("SoundController disabled, resetting volume to 0");
-        _audioSource.volume = 0;
+        Debug.Log("SoundController destroyed, resetting volume to 0");
+        AudioListener.volume = 0;
         _soundText.GetComponent<TextMeshProUGUI>().text = "0%";
     }
 }

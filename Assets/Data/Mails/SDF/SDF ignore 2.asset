@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c50a8a2f81707c4f8db29ac8092433e, type: 3}
+  m_Name: SDF ignore 2
+  m_EditorClassIdentifier: Assembly-CSharp::MailData
+  mailType: 0
+  title: Desoler
+  content: "Coucou mon poussin, j'ai appris par mon association qu'un de nos sans-abri
+    qui mourait de faim \xE9tait venu par effraction dans ton entreprise. Je suis
+    vraiment d\xE9sol\xE9e qu'il ait fait \xE7a mais c'est tr\xE8s gentil de ta part
+    de l'avoir laiss\xE9 tranquille. Je reconnais bien l\xE0 mon fils qui donne aux
+    d\xE9munis. Bisous.  Maman"
+  leftButtonText: "Je ne vous d\xE9cevrai plus."
+  leftButtonMoney: 0
+  leftButtonKarma: 0
+  rightButtonText: "Le d\xE9noncer !"
+  rightButtonMoney: 0
+  rightButtonKarma: 0
+  nextMailGood: {fileID: 11400000, guid: f6e133424c25da34bac626ca94f31d40, type: 2}
+  nextMailBad: {fileID: 11400000}
+  nextMailDay: 7

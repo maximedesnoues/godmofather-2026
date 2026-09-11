@@ -46,6 +46,9 @@ public class MarketManager : MonoBehaviour
         GameManager.Instance.Data.hasPrediction = false;
         GameManager.Instance.Data.currentBet = 0;
 
+        if (marketUI != null)
+            marketUI.ApplyCurrentBetInput();
+
         GenerateRandomEvent();
 
         if (CurrentEvent == null) return;

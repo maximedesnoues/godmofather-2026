@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c50a8a2f81707c4f8db29ac8092433e, type: 3}
+  m_Name: SDF denoncer 1
+  m_EditorClassIdentifier: Assembly-CSharp::MailData
+  mailType: 0
+  title: Disparition
+  content: "coucou, j'\xE9tais \xE0 mon association pour les sans-abri aujourd'hui
+    et Georges n'y \xE9tait pas. C'est un de nos sans-abri les plus habitu\xE9s et
+    il \xE9tait parti acheter de la nourriture pour les autres. J'esp\xE8re qu'il
+    ne lui est rien arriv\xE9. Bisous  Maman"
+  leftButtonText: Je ne sais pas se qu'il est devenu.
+  leftButtonMoney: 0
+  leftButtonKarma: 0
+  rightButtonText: "Le d\xE9noncer !"
+  rightButtonMoney: 0
+  rightButtonKarma: 0
+  nextMailGood: {fileID: 11400000, guid: 72bbbe96889fd024ea442b49b10c0c95, type: 2}
+  nextMailBad: {fileID: 11400000}
+  nextMailDay: 6
